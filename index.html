@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1a Avaluació CCSS</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<style>
+:root{--ink:#18253c;--muted:#63748e;--bg:#f5f7fc;--blue:#4169e1;--blue2:#e9efff;--line:#dee5f0;--ok:#1c956b;--bad:#c65050;--yellow:#fff3cc;--white:#fff;--shadow:0 10px 30px #14284b0d}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,'Segoe UI',sans-serif}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.48;cursor:not-allowed}#app{min-height:100vh}.layout{display:grid;grid-template-columns:280px minmax(0,1fr);min-height:100vh}.side{background:var(--white);border-right:1px solid var(--line);padding:24px 16px;position:sticky;top:0;height:100vh;overflow:auto}.brand{display:flex;gap:11px;align-items:center;margin:0 8px 25px}.logo{width:44px;height:44px;background:linear-gradient(140deg,#426ce7,#8a64e8);color:white;border-radius:14px;display:grid;place-items:center;font-size:23px;font-weight:800}.brand b{font-size:17px;display:block;line-height:1.2}.brand small{color:var(--muted)}.navhead{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8b98ac;font-weight:800;padding:10px 13px}.navbtn{display:flex;align-items:center;gap:10px;border:0;background:transparent;width:100%;border-radius:11px;text-align:left;color:#53647d;padding:11px 12px;margin:2px 0;font-weight:600}.navbtn:hover{background:#f2f5fe}.navbtn.active{background:#eaf0ff;color:#3459c8}.navbtn .num{margin-left:auto;background:#edf1f7;border-radius:9px;padding:1px 7px;font-size:11px;color:#73839b}.navgroup{margin:2px 0}.navsublist{display:flex;flex-direction:column;gap:3px;margin:3px 0 11px 30px;padding-left:12px;border-left:2px solid #e4eaf7}.navsub{border:0;background:transparent;border-radius:9px;color:#687893;font-weight:550;text-align:left;padding:8px 11px;font-size:13px;width:100%;line-height:1.35}.navsub:hover{background:#f2f5fe;color:#3459c8}.navsub.active{background:#eaf0ff;color:#3459c8;font-weight:750}.navbtn .chevron{font-size:12px;margin-left:4px;color:#8793a7}.navbtn.active .chevron{color:#3459c8}.main{padding:30px clamp(18px,4vw,64px);min-width:0;max-width:1350px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:22px}.eyebrow{color:#5570a0;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;font-size:11px}.title{font-weight:850;letter-spacing:-.8px;font-size:clamp(24px,3vw,34px);margin:4px 0}.desc{color:var(--muted);margin:0}.pill{padding:8px 12px;border-radius:99px;background:white;border:1px solid var(--line);font-size:12px;font-weight:700;color:#5d6a85;white-space:nowrap}.two{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}.panel{background:white;border:1px solid var(--line);border-radius:19px;box-shadow:var(--shadow);padding:24px;min-width:0}.sublist{display:flex;flex-wrap:wrap;gap:8px;margin:19px 0}.chip{border:1px solid var(--line);background:white;color:#52617c;border-radius:11px;padding:9px 13px;font-weight:650}.chip.on{background:#eaf0ff;border-color:#b6c8ff;color:#3258be}.tools{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:13px 0 19px;border-bottom:1px solid var(--line)}.seg{display:flex;gap:3px;background:#f0f3f9;border-radius:12px;padding:4px}.seg button{padding:7px 13px;border-radius:9px;background:transparent;border:0;font-size:13px;font-weight:750;color:#69778c}.seg button.on{background:#fff;color:#2f56bf;box-shadow:0 1px 6px #34456818}.primary{border:0;background:var(--blue);color:white;padding:11px 16px;border-radius:12px;font-weight:750}.secondary{border:1px solid var(--line);background:white;color:#485c7e;padding:10px 14px;border-radius:12px;font-weight:750}.label{font-size:11px;color:#8793a7;font-weight:800;text-transform:uppercase;letter-spacing:1.2px}.challenge{padding:22px 0 14px;min-height:160px}.prompt{font-size:16px;font-weight:650;margin:10px 0;color:#364562}.mathline{font-size:clamp(21px,3vw,29px);margin:20px 0;line-height:2;overflow:hidden;padding:5px 0;white-space:nowrap}.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:10px 0 16px}.choice{border:1.5px solid var(--line);min-height:70px;background:white;border-radius:13px;padding:14px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:650;color:var(--ink);transition:.12s;overflow-x:auto}.choice:hover:not(:disabled){border-color:#99b1fd;background:#f8faff}.choice.ok{border-color:#68c9a3;background:#eafbf3;color:#147954}.choice.bad{border-color:#ebaaa6;background:#fff0ed;color:#ae4141}.choice:disabled{opacity:1}.choice .katex{font-size:1.16em}.feedback{border-radius:13px;padding:14px 16px;margin:12px 0 0;background:#eef9f4;color:#136b4c;font-weight:650}.feedback.bad{background:#fff0ef;color:#a74142}.hint{background:#fff9e8;border:1px solid #f3e7bf;padding:13px 15px;border-radius:12px;color:#8d6d20;margin-top:12px}.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}.statrow{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:15px 0}.stat{background:#f5f7fc;border-radius:12px;padding:14px}.stat strong{display:block;font-size:26px;line-height:1.2}.stat small{color:var(--muted)}.progress{height:8px;border-radius:9px;background:#e8edf7;overflow:hidden;margin:18px 0}.progress>div{height:100%;background:linear-gradient(90deg,#6784f6,#8d6be7);transition:width .2s}.outline{border-top:1px solid var(--line);margin-top:15px;padding-top:17px;color:#62738e}.outline p{margin:8px 0}.minihead{font-size:17px;font-weight:800;margin:0 0 10px}.step{padding:11px 13px;background:#f5f7fc;border-radius:10px;margin:8px 0;overflow-x:auto}.modalback{position:fixed;inset:0;background:#14213a88;z-index:10;display:grid;place-items:center;padding:20px}.modal{background:white;width:min(640px,100%);max-height:90vh;overflow:auto;border-radius:20px;padding:25px}.modaltop{display:flex;justify-content:space-between;align-items:center}.close{border:0;background:#f3f5fb;border-radius:10px;padding:7px 13px;font-size:20px}.theoryitem{padding:15px 0;border-bottom:1px solid var(--line)}.theoryitem b{display:block;margin-bottom:5px}.note{font-size:13px;color:var(--muted)}.footer{font-size:12px;color:#9aa6b8;margin-top:22px}.mobilebar{display:none}.kbd{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin:13px 0}.key{min-height:43px;border:1px solid #cbd7ee;border-radius:9px;background:#f8faff;font-weight:700}.kbdinput{width:100%;min-height:50px;border-radius:12px;border:1px solid var(--line);padding:12px;font-size:20px}.problemstage{background:#f7f9fe;border:1px solid var(--line);padding:14px 16px;border-radius:13px;margin:15px 0}.smallmath{font-size:17px;line-height:1.9}.noquestions{color:var(--muted)}@media(max-width:1000px){.two{grid-template-columns:1fr}.asidepanel{display:grid;grid-template-columns:1fr 1fr;gap:12px}.asidepanel>.panel{height:100%}}@media(max-width:680px){.layout{display:block}.side{position:relative;width:100%;height:auto;padding:12px;border-right:none;border-bottom:1px solid var(--line)}.brand{margin-bottom:7px}.navlist{display:block;max-height:55vh;overflow:auto}.navhead{display:none}.navbtn{white-space:normal;width:100%}.navbtn .num{display:none}.navsublist{margin-left:29px}.side{max-height:70vh;overflow:auto}.main{padding:20px 14px}.top{align-items:flex-start}.panel{padding:17px;border-radius:15px}.choices{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.choice{min-width:0;min-height:64px;padding:9px 5px;font-size:13px;overflow-x:hidden}.choice .katex{font-size:1em}.mathline{font-size:22px}.asidepanel{grid-template-columns:1fr}.tools{align-items:flex-start}.kbd{grid-template-columns:repeat(5,minmax(0,1fr))}}
+/* L'enunciat matemàtic s'ajusta a l'amplada real de l'exercici. */
+.mathline .katex-display{margin:.45em 0;overflow:visible;text-align:center}
+.mathline .katex-display>.katex{max-width:100%}
+.mathline{max-width:100%;min-width:0}
+@media(max-width:680px){.mathline{font-size:22px}}
+
+.guidebox{margin:15px 0;padding:18px;border:1px solid #b9c9f5;border-radius:14px;background:#f5f8ff}.guidehead,.examhead{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.guidehead small{display:block;color:var(--muted)}.guideopts{display:grid;gap:9px;margin:15px 0}.guideopt{text-align:left;background:white;border:1px solid var(--line);padding:12px;border-radius:10px}.guideopt.picked{border-color:var(--blue);background:#e9efff}.adaptive{display:flex;align-items:center;flex-wrap:wrap;gap:12px;background:#edf7f1;border:1px solid #bedfcf;padding:12px;border-radius:12px;margin:14px 0}.topicstat{margin:11px 0}.topicstat>div:first-child{display:flex;justify-content:space-between;gap:10px;font-size:13px}.topicstat .progress{margin:5px 0}.topicstat small{color:var(--muted)}.examtrack{height:9px;background:#edf0f7;border-radius:9px;margin:17px 0}.examtrack div{height:100%;border-radius:9px;background:var(--blue)}.examscore{font-size:48px;font-weight:800;color:var(--blue)}.review{border:1px solid var(--line);border-radius:12px;padding:13px;margin:10px 0}.review summary{cursor:pointer;font-weight:700}.review .smallmath{margin:12px 0}
+.solutionsteps{padding-left:22px}.solutionsteps li{padding:7px 0}.solutionsteps .katex{font-size:1.15em}</style></head><body><div id="app"></div><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" onload="window.renderMath&&window.renderMath()"></script><script>
+const $=s=>document.querySelector(s),R=(a,b)=>Math.floor(Math.random()*(b-a+1))+a,P=a=>a[Math.floor(Math.random()*a.length)],S=a=>[...a].sort(()=>Math.random()-.5),nz=(a,b)=>{let x;do{x=R(a,b)}while(!x);return x},sup=x=>x<0?`(${x})`:x,sg=n=>n>=0?`+${n}`:`${n}`,fmt=(a,b)=>`${a}x${b>=0?'+':''}${b}`,frac=(a,b)=>`\\frac{${a}}{${b}}`,pow=(a,n)=>`${a}^{${n}}`,poly=(co)=>co.map((v,i)=>{let p=co.length-1-i;if(!v)return '';let z=Math.abs(v),v0=(p===0?`${z}`:z===1?'':`${z}`)+(p?`x${p===1?'':`^{${p}}`}`:'');return `${i===0?(v<0?'-':''):(v<0?'-':'+')}${v0}`}).join('').replace(/^\+/,'')||'0';
+const units=[{id:'algebra',icon:'∑',name:'Expressions algebraiques',sub:[['numeric','Valor numèric'],['monoms','Monomis'],['polys','Operacions amb polinomis'],['combined','Operacions combinades'],['notables','Identitats notables'],['factor','Factor comú'],['factoring','Factorització'],['fractions','Fraccions algebraiques']]},{id:'language',icon:'✎',name:'Llenguatge algebraic',sub:[['translate','Escriure expressions'],['numberproblem','Troba el nombre']]},{id:'linear',icon:'=',name:'Primer grau',sub:[['first','Equacions amb parèntesis'],['firstfrac','Equacions amb fraccions']]},{id:'quadratic',icon:'x²',name:'Segon grau',sub:[['second','Completes'],['secondinc','Incompletes'],['secondarr','Sense arreglar']]},{id:'higher',icon:'xⁿ',name:'Grau superior',sub:[['ruffini','Ruffini i factor comú'],['biquad','Biquadrades'],['triquad','Triquadrades']]},{id:'special',icon:'√',name:'Equacions especials',sub:[['rational','Racionals'],['radical','Amb radicals'],['log','Logarítmiques'],['exp','Exponencials']]},{id:'systems',icon:'{ }',name:'Sistemes',sub:[['syslin','Lineals'],['sysnon','No lineals polinòmics'],['sysspecial','Exponencials i logarítmics']]},{id:'inequal',icon:'≤',name:'Inequacions',sub:[['ineq1','Primer grau'],['ineq2','Polinòmiques'],['ineqsys1','Sistemes d’una incògnita'],['ineqxy','Dues incògnites'],['ineqsys2','Sistemes de dues incògnites']]}];
+let state={u:'algebra',sub:'numeric',level:2,q:null,answered:false,attempts:0,right:0,streak:0,missStreak:0,history:{},hints:0,phase:0,problemvar:null,theory:false,keyboard:false,kinput:'',guided:false,guideStep:0,guideChoice:null,exam:null,notice:''};
+const lcm=(a,b)=>{const gcd=(x,y)=>y?gcd(y,x%y):x;return a*b/gcd(a,b)};const unique=(a)=>[...new Set(a)];function makeQ(prompt,expr,correct,wrong,explanation,hint,extra={}){let opts=unique([correct,...wrong.filter(x=>x!==correct)]);let filler=0;while(opts.length<4){opts.push(`\\text{Cap de les anteriors }${++filler}`)}return {prompt,expr,correct,options:S(opts.slice(0,4)),explanation,hint,...extra}}
+function rootOptions(roots){let sorted=[...roots].sort((a,b)=>a-b);return sorted.length?`\\{${unique(sorted).join(',\\;')}\\}`:'\\varnothing'}
+function equationOfRoots(a,b,A=1){return `${A===1?'':A}x^2${-A*(a+b)>=0?'+':''}${-A*(a+b)}x${A*a*b>=0?'+':''}${A*a*b}=0`.replace(/\+0x/g,'').replace(/-0x/g,'')}
+// Generadors reforçats per a 1r de batxillerat. Els nivells 2 i 3 no són exercicis introductoris.
+const rr=(a,b)=>R(a,b), pick=P, nonzero=()=>nz(-7,7);
+const F=(n,d=1)=>{if(d<0){n=-n;d=-d}let g=(a,b)=>b?g(b,a%b):Math.abs(a);let k=g(n,d);n/=k;d/=k;return d===1?`${n}`:`\\frac{${n}}{${d}}`};
+const fpoly=(cs)=>poly(cs);
+const rootSet=(r)=>rootOptions(r);
+const solveOptions=(answer,wrong)=>[...new Set(wrong.filter(s=>s!==answer))];
+const mat=(arr)=>`\\begin{cases}${arr.join('\\\\')}\\end{cases}`;
+const linX=(a,b)=>poly([a,b]);
+const minus=(a,b)=>`(${a}x${sg(b)})`;
+const multiplyPoly=(p,q)=>{let z=Array(p.length+q.length-1).fill(0);p.forEach((v,i)=>q.forEach((w,j)=>z[i+j]+=v*w));return z};
+const rootsPoly=(roots,co=1)=>roots.reduce((p,r)=>multiplyPoly(p,[1,-r]),[co]);
+function hardQuestion(sub,l){
+ const hard=l===3;
+ let a,b,c,d,e,f,g,h,x,y,t,A,B,C,D,k,eq,sol,ex,wrong;
+ switch(sub){
+ case 'numeric':{
+ x=pick([-3,-2,2,3]); y=pick([-2,-1,2,3]); a=nz(-5,5);b=nz(-5,5);c=nz(-7,7);d=nz(-6,6);
+ let value=a*x*x+b*x*y+c*y*y+d*(x-y);
+ let expr=`A(x,y)=${poly([a,0,0]).replace('x^2','x^2')} ${b<0?'-':'+'}${Math.abs(b)}xy${c<0?'-':'+'}${Math.abs(c)}y^2${d<0?'-':'+'}${Math.abs(d)}(x-y)`;
+ if(hard){let den=pick([2,3,4]);value*=den;expr=`B(x,y)=${den}\\left(${expr.substring(expr.indexOf('=')+1)}\\right)`}
+ return makeQ('Calcula el valor numèric amb dues variables i parèntesis',`${expr},\\quad x=${x},\\ y=${y}`,`${value}`,[`${-value}`,`${value+(hard?4:2)}`,`${value-a*x*x}`],`Substituïm x=${x}, y=${y}; primer calculem potències i productes, després sumes i restes. Resultat: ${value}.`,'Compte amb els quadrats dels nombres negatius i amb el producte xy.');}
+ case 'monoms':{
+ a=nz(-7,7);b=nz(-6,6);c=nz(-5,5);d=rr(2,5);e=rr(1,4);f=rr(2,5);g=rr(1,3);
+ if(!hard){let coeff=a*b;eq=`(${a}x^{${d}}y^{${e}})\\cdot(${b}x^{${f}}y^{${g}})`;sol=`${coeff}x^{${d+f}}y^{${e+g}}`;wrong=[`${coeff}x^{${d*f}}y^{${e*g}}`,`${a+b}x^{${d+f}}y^{${e+g}}`,`${coeff}x^{${d+f}}y^{${e*g}}`];}
+ else {let coeff=a*b*c;eq=`\\frac{(${a}x^{${d+f}}y^{${e+g}})(${b}x^{${f}}y^{${g+1}})}{${c===0?1:c}x^{${f}}y^{${g}}}`;let num=a*b,den=c;sol=`${F(num,den)}x^{${d+f}}y^{${e+g+1}}`;wrong=[`${F(num,den)}x^{${d}}y^{${e+1}}`,`${F(num,den)}x^{${d+2*f}}y^{${e+g+1}}`,`${F(num,den)}x^{${d+f}}y^{${e+1}}`];}
+ return makeQ('Opera amb monomis de dues variables',eq,sol,wrong,`Operem per separat els coeficients i els exponents de cada lletra. Resultat: ${sol}.`,'En multiplicar sumem exponents; en dividir, els restem.');}
+ case 'polys':{
+ a=rr(1,4);b=nonzero();c=nonzero();d=rr(1,3);e=nonzero();f=nonzero();
+ let p=[a,b,c],q=[d,e,f],out=multiplyPoly(p,q), correct=fpoly(out);
+ let modified=[...out];modified[2]+=1;
+ eq=hard?`A(x)=${fpoly(p)},\\quad B(x)=${fpoly(q)},\\quad A(x)\\cdot B(x)`:`(${fpoly(p)})(${fpoly(q)})`;
+ return makeQ('Multiplica dos polinomis de segon grau',eq,correct,[fpoly(modified),fpoly(out.slice(0,4)),fpoly(out.map((v,i)=>i===1?-v:v))],`Apliquem distributiva terme a terme i reduïm potències iguals: ${correct}.`,'Es produiran termes fins a grau quatre. Agrupa els de grau 3, 2 i 1.');}
+ case 'combined':{
+ a=rr(2,5);b=rr(1,6);c=rr(1,5);d=rr(1,5);e=rr(2,6);
+ let p=multiplyPoly([1,a],[1,-b]), q=multiplyPoly([1,-c],[1,d]);
+ let res=p.map((v,i)=>e*v-q[i]);if(hard){let extra=multiplyPoly([1,b],[1,c]);res=res.map((v,i)=>v+2*extra[i]);eq=`${e}(${fpoly(p)})-(${fpoly(q)})+2(${fpoly(extra)})`;}else eq=`${e}(x+${a})(x-${b})-(x-${c})(x+${d})`;
+ sol=fpoly(res);
+ return makeQ('Desenvolupa i redueix una expressió combinada',eq,sol,[fpoly(res.map((v,i)=>i===1?v+2:v)),fpoly(res.map((v,i)=>i===2?-v:v)),fpoly(res.map((v,i)=>i===0?v+1:v))],`Desenvolupem els productes, distribuïm els signes i agrupem els coeficients: ${sol}.`,'Multiplica primer els binomis i vigila el signe menys davant del producte.');}
+ case 'notables':{
+ a=rr(2,5);b=rr(1,6);c=rr(1,4);
+ if(hard){eq=`(${a}x-${b})^2-(${a}x+${c})(${a}x-${c})`;sol=poly([0,-2*a*b,b*b+c*c]);wrong=[poly([0,2*a*b,b*b+c*c]),poly([a*a,-2*a*b,b*b+c*c]),poly([0,-a*b,b*b+c*c])];}
+ else {eq=`${poly([a*a,-2*a*b,b*b])}-${c*c}`;sol=`(${a}x-${b-c})(${a}x-${b+c})`;wrong=[`(${a}x+${b-c})(${a}x+${b+c})`,`(${a}x-${b})^2`,`(${a}x-${c})(${a}x+${c})`];}
+ return makeQ(hard?'Redueix combinant dues identitats notables':'Factoritza amb identitats notables',eq,sol,wrong,`Identifiquem els quadrats perfectes i la diferència de quadrats. Resultat: ${sol}.`,'Pensa en A²−B²=(A−B)(A+B).');}
+ case 'factor':{
+ a=rr(2,6);b=rr(2,5);c=rr(2,5);d=rr(1,3);
+ eq=poly([a*b,a*c,-a*(b+c),a*d]);
+ // Forma construïda: factor comú a; no confondre factorització completa.
+ if(hard){eq=poly([a*b, -a*b*d, -a*c*d, a*c*d*d]);sol=`${a}(x-${d})(${b}x^2-${c*d})`;wrong=[`${a}(x+${d})(${b}x^2-${c*d})`,`${a}(x-${d})(${b}x^2+${c*d})`,`${a}(x-${d})(${b}x-${c*d})`];}
+ else {eq=poly([a*b, a*c, -a*b*d]);sol=`${a}(${b}x^2+${c}x-${b*d})`;wrong=[`${a}x(${b}x+${c})`,`${b}(${a}x^2+${c}x-${a*d})`,`${a}(${b}x^2-${c}x-${b*d})`];}
+ return makeQ('Extreu factor comú i simplifica',eq,sol,wrong,`Dividim cadascun dels termes pel factor comú. En aquest cas obtenim ${sol}.`,'Comprova que en tornar a multiplicar recuperes tots els coeficients.');}
+ case 'factoring':{
+ a=rr(1,5);b=rr(1,6);c=rr(1,5);if(a===b)b++;
+ let roots=[-a,b,c],coeff=rr(2,4),p=rootsPoly(roots,coeff);
+ if(hard){p=[...p,0];sol=`${coeff}x(x+${a})(x-${b})(x-${c})`;}else sol=`${coeff}(x+${a})(x-${b})(x-${c})`;
+ eq=poly(p);wrong=[`${coeff}(x-${a})(x-${b})(x-${c})`,`${coeff}(x+${a})(x+${b})(x-${c})`,`${coeff}(x+${a})(x-${b})(x+${c})`];
+ return makeQ('Factoritza completament el polinomi',eq,sol,wrong,`Traiem factor comú si n'hi ha i busquem arrels enteres amb Ruffini. La factorització és ${sol}.`,'Prova els divisors del terme independent i torna a factoritzar el quocient.');}
+ case 'fractions':{
+ a=rr(1,5);b=rr(1,6);c=rr(1,5);while(c===a)c++;
+ eq=hard?`\\frac{${poly(rootsPoly([a,-b],1))}}{${poly(rootsPoly([a,c],1))}}\\cdot\\frac{x-${c}}{x+${b}}`:`\\frac{${poly(rootsPoly([a,-b],1))}}{${poly(rootsPoly([a,c],1))}}`;
+ sol=hard?`1,\\quad x\\neq ${a},\\ ${c},\\ -${b}`:`\\frac{x+${b}}{x-${c}},\\quad x\\neq ${a},\\ ${c}`;
+ wrong=hard?[`1,\\quad x\\neq ${a}`,`1,\\quad x\\neq ${c}`,`0`]:[`\\frac{x-${b}}{x-${c}}`,`\\frac{x+${b}}{x-${a}}`,`x+${b}`];
+ return makeQ('Simplifica i determina tots els valors exclosos',eq,sol,wrong,`Descomponem numeradors i denominadors en factors. Cancel·lem els factors iguals, però les restriccions són les de l'expressió original: ${sol}.`,'Els valors prohibits es busquen ABANS de simplificar.');}
+ case 'translate': case 'numberproblem':{
+ x=rr(3,12);a=rr(2,5);b=rr(2,7);c=rr(2,6);d=rr(2,5);
+ let val=a*(x+b)-c*(x-d),label=`La diferència entre ${a} vegades la suma d'un nombre i ${b}, i ${c} vegades la diferència entre el nombre i ${d}, és ${val}.`;
+ if(hard){val=a*(x+b)-c*(x-d)+x/2; x*=2;val=a*(x+b)-c*(x-d)+x/2;label=`La diferència entre ${a} vegades la suma d'un nombre i ${b}, i ${c} vegades la diferència entre el nombre i ${d}, més la meitat del nombre, és ${val}.`}
+ eq=hard?`${a}(x+${b})-${c}(x-${d})+\\frac{x}{2}=${val}`:`${a}(x+${b})-${c}(x-${d})=${val}`;
+ if(sub==='translate')return makeQ(`Planteja l'equació: «${label}»`,`\\text{Anomena }x\\text{ al nombre}`,eq,[`${a}x+${b}-${c}x-${d}=${val}`,`${a}(x-${b})-${c}(x+${d})=${val}`,`${a}(x+${b})+${c}(x-${d})=${val}`],`Traduïm les expressions «vegades la suma», «vegades la diferència» i, si escau, «la meitat».`,'Els parèntesis són imprescindibles en una suma o diferència multiplicada.');
+ // Si el coeficient de x és 0 la igualtat no determina un únic nombre.
+ let slope=a-c+(hard?.5:0);if(slope===0)return hardQuestion(sub,l);
+ return makeQ('Troba el nombre: '+label,eq,String(x),[String(x+2),String(x-2),String(-x)],`Desenvolupem, agrupem els termes amb x i obtenim x=${x}.`,'Desenvolupa primer els parèntesis; després aïlla x.');}
+ case 'second': case 'secondinc': case 'secondarr':{
+ a=rr(2,5);b=rr(1,6);c=rr(1,5);d=rr(2,5);let roots=[-b,c],p=rootsPoly(roots,a);
+ let explain;
+ if(sub==='secondinc'){
+   roots=[0,c];p=rootsPoly(roots,a);
+   if(hard){let den=rr(2,6),shift=rr(2,5);eq=`\\frac{${poly(p)}}{${den}}+${shift}x=${shift}x`}
+   else eq=`${poly(p)}=0`;
+   explain=`Després de reduir queda ${poly(p)}=0. Traiem x factor comú: x(${a}x-${a*c})=0. Les arrels són 0 i ${c}.`;
+ }else if(sub==='secondarr'){
+   let T=hard?[rr(2,5),nz(-6,6),nz(-6,6)]:[0,nz(-6,6),nz(-6,6)];
+   if(hard){let den1=rr(2,4),den2=rr(2,5),left=p.map((v,i)=>den1*(v+T[i])),right=T.map(v=>den2*v);
+      eq=`\\frac{${poly(left)}}{${den1}}=\\frac{${poly(right)}}{${den2}}`;
+   }else{let left=p.map((v,i)=>v+T[i]);eq=`${poly(left)}=${poly(T)}`;}
+   explain=`Eliminem denominadors si cal, passem tots els termes al mateix membre i reduïm: ${poly(p)}=0. Resolem la quadràtica i obtenim x=-${b} i x=${c}.`;
+ }else{
+   eq=hard?`\\frac{${poly(p)}}{${d}}=0`:`${poly(p)}=0`;
+   explain=`La forma general és ${poly(p)}=0, que es factoritza com ${a}(x+${b})(x-${c})=0. Solucions x=-${b} i x=${c}.`;
+ }
+ sol=rootSet(roots);return makeQ('Resol l’equació de segon grau (totes les arrels reals)',eq,sol,[rootSet([roots[0]]),rootSet(roots.map(v=>-v)),rootSet([roots[1]+1,roots[0]])],explain,'Arriba a ax²+bx+c=0. Després aplica factorització o fórmula general.');}
+ case 'ruffini':{
+ let roots=[-rr(1,5),rr(1,6),rr(2,7)];if(roots[1]===roots[2])roots[2]++;let p=rootsPoly(roots,rr(2,4));if(hard){p=[...p,0];roots.push(0)}eq=`${poly(p)}=0`;sol=rootSet(roots);
+ return makeQ('Resol amb factor comú i Ruffini',eq,sol,[rootSet(roots.slice(0,2)),rootSet(roots.map(v=>-v)),rootSet([...roots.slice(0,-1),rr(8,10)])],`Si apareix un factor x, l'extraiem; després provem els divisors del terme independent amb Ruffini. Arrels reals: ${sol}.`,'Comprova primer si pots treure x i, a continuació, fes Ruffini fins a un polinomi de grau 2.');}
+ case 'biquad': case 'triquad':{
+ let squares= sub==='biquad'?[rr(1,3)**2,rr(4,6)**2]:[1,4,9];if(hard){squares=sub==='biquad'?[rr(1,4)**2,-rr(1,5)]:[1,4,-rr(1,5)]}
+ let p=rootsPoly(squares,rr(2,4));let out=p.flatMap(()=>[]);let deg=squares.length;
+ let terms=p.map((v,i)=>`${v<0?'-':'+'}${Math.abs(v)===1 && deg-i>0?'':Math.abs(v)}${deg-i>0?'x^{'+2*(deg-i)+'}':''}`).join('').replace(/^\+/,'').replace(/\+0x\^\{\d+\}/g,'');
+ let real=squares.filter(v=>v>=0).flatMap(v=>v===0?[0]:[-Math.sqrt(v),Math.sqrt(v)]);sol=rootSet(real);
+ return makeQ('Resol amb el canvi t=x² i descarta t<0',`${terms}=0`,sol,[rootSet(real.filter(v=>v>=0)),rootSet(real.slice(0,2)),rootSet([...real,rr(7,9)])],`Fem t=x² i resolem el polinomi ${poly(p)}=0. Només els valors t≥0 proporcionen arrels reals: ${sol}.`,'No oblidis que x² mai no pot ser negatiu en els nombres reals.');}
+ case 'rational':{
+ // A/(x-a)+B/(x-b)=K genera una quadràtica genuïna;
+ // es calculen totes les arrels i s'exclouen els denominadors nuls.
+ let roots,da,db,L,M,K;
+ for(let tries=0;tries<600;tries++){
+   da=rr(-5,3);db=rr(da+1,7);L=nz(-9,9);M=nz(-9,9);K=pick([-3,-2,1,2,3]);
+   let aa=K,bb=-(K*(da+db)+L+M),cc=K*da*db+L*db+M*da;
+   let disc=bb*bb-4*aa*cc,sq=Math.sqrt(disc);
+   if(disc>0&&Number.isInteger(sq)&&((-bb+sq)%(2*aa)===0)&&((-bb-sq)%(2*aa)===0)){
+     roots=[(-bb+sq)/(2*aa),(-bb-sq)/(2*aa)];
+     if(roots.every(v=>v!==da&&v!==db&&Math.abs(v)<=20)&&roots[0]!==roots[1])break;
+   }
+   roots=null;
+ }
+ if(!roots)return hardQuestion('rational',l);
+ const expr=hard?`\\frac{${L}}{x${sg(-da)}}+\\frac{${M}}{x${sg(-db)}}=${K}`:
+ `\\frac{${L}}{x${sg(-da)}}+\\frac{${M}}{x${sg(-db)}}=${K}`;
+ const correct=rootSet(roots);
+ return makeQ('Resol la racional de segon grau i comprova les restriccions',expr,correct,[rootSet([roots[0]]),rootSet(roots.map(v=>-v)),rootSet([da,db])],`Primer exigim x≠${da} i x≠${db}. Multipliquem per (x${sg(-da)})(x${sg(-db)}), resolem la quadràtica i comprovem les dues arrels: ${correct}.`,'Escriu les exclusions del domini abans de multiplicar pels denominadors.');}
+ case 'radical':{
+ x=rr(1,9);a=rr(2,7);b=rr(2,6);while(b===a)b=rr(2,6);
+ if(!hard){let A=a*a-x,B=a-x;eq=`\\sqrt{x${sg(A)}}=x${sg(B)}`;sol=String(x);ex=`Aïllem el radical, elevem al quadrat i comprovem en l'equació original: x=${x}. Les possibles arrels estranyes s'han d'eliminar.`;}
+ else {let A=a*a-x,B=b*b-x;eq=`\\sqrt{x${sg(A)}}+\\sqrt{x${sg(B)}}=${a+b}`;sol=String(x);ex=`Els radicals són creixents en el seu domini, de manera que com a màxim hi ha una solució. Aïllem un radical, elevem dues vegades al quadrat quan cal i comprovem: x=${x}, perquè les arrels valen ${a} i ${b}.`}
+ return makeQ('Resol l’equació amb radicals i comprova arrels estranyes',eq,sol,[String(x+1),String(-x),String(x-2)],ex,'Primer determina el domini. Si hi ha dos radicals, aïlla’n un abans d’elevar al quadrat.');}
+ case 'log':{
+ x=rr(4,14);a=rr(1,5);b=rr(1,3);while(b===a)b=rr(1,3);
+ if(hard){
+    let base=rr(2,5),K=(x+a)*(x+b);
+    eq=`\\log_{${base}}(x+${a})+\\log_{${base}}(x+${b})=\\log_{${base}}(${K})`;
+    return makeQ('Resol combinant logaritmes; descarta les arrels fora del domini',eq,String(x),[String(-x-a-b),String(x+1),String(-a)],`El domini és x>-${Math.min(a,b)}. Agrupem en un únic logaritme, obtenim (x+${a})(x+${b})=${K} i resolem el segon grau. Només x=${x} compleix el domini.`,'La suma de logaritmes és el logaritme del producte; després cal resoldre un segon grau.');
+ }
+ if(x<=b)return hardQuestion(sub,l);
+ let base=rr(2,6);
+ eq=`\\log_{${base}}(x+${a})-\\log_{${base}}(x-${b})=\\log_{${base}}\\left(${F(x+a,x-b)}\\right)`;
+ return makeQ('Resol combinant propietats dels logaritmes i el domini',eq,String(x),[String(-x),String(b),String(x+1)],`Domini: x>${b}. Apliquem la propietat de la diferència, igualem arguments i obtenim x=${x}; compleix el domini.`,'Resta de logaritmes = logaritme del quocient. Comprova els arguments originals.');}
+ case 'exp':{
+ // Nivells mitjà i difícil: escrivim expressament bases equivalents
+ // (9^x, 27^(x-1), 3^(4-x)) en lloc de limitar-nos a 3^(2x).
+ const base=3;
+ if(!hard){
+   let r1=rr(0,2),r2=rr(r1+1,4),v1=base**r1,v2=base**r2;
+   sol=rootSet([r1,r2]);
+   if(Math.random()<0.5){
+     eq=`9^x-${v1+v2}\\cdot3^x+${v1*v2}=0`;
+     ex=`Escrivim 9^x=(3^x)^2 i fem t=3^x>0. Queda (t-${v1})(t-${v2})=0; per tant 3^x=${v1} o 3^x=${v2}, i ${sol}.`;
+   }else{
+     eq=`9^{x+1}-${9*(v1+v2)}\\cdot3^x+${9*v1*v2}=0`;
+     ex=`Reescrivim 9^{x+1}=9(3^x)^2. Dividim tota l'equació per 9 i fem t=3^x>0: (t-${v1})(t-${v2})=0. Així ${sol}.`;
+   }
+   return makeQ('Resol utilitzant una base comuna i un canvi de variable',eq,sol,[rootSet([r1]),rootSet([-r1,-r2]),rootSet([r1+1,r2+1])],ex,'Converteix 9^x en (3^x)^2; després fes t=3^x.');
+ }
+ const tipus=rr(0,1);
+ if(tipus===0){
+   // 9^(x+2) creix i 3^(4-x) decreix: l'equació té una única arrel real.
+   x=rr(1,3);let rhs=3**(2*x+4)-3**(4-x);
+   eq=`9^{x+2}-3^{4-x}=${rhs}`;sol=String(x);
+   return makeQ('Resol amb bases equivalents i exponents de signes oposats',eq,sol,[String(x+1),String(x-1),String(4-x)],`Posem t=3^x>0. Aleshores 9^{x+2}=81t^2 i 3^{4-x}=81/t. Multiplicant per t queda 81t^3-${rhs}t-81=0. L'única arrel positiva és t=${3**x}, de manera que x=${x}.`,'Utilitza 9^(x+2)=81·(3^x)^2 i 3^(4−x)=81/3^x. Només serveix t>0.');
+ }
+ if(tipus===1){
+   let roots=pick([[0,1,2],[0,1,3],[1,2,3]]),values=roots.map(v=>3**v),sum=values.reduce((a,b)=>a+b,0),pair=values[0]*values[1]+values[0]*values[2]+values[1]*values[2],prod=values.reduce((a,b)=>a*b,1);
+   eq=`3\\cdot27^{x-1}-${sum}\\cdot9^x+${pair}\\cdot3^x-${prod}=0`;
+   sol=rootSet(roots);
+   return makeQ('Resol un cúbic exponencial transformant 27 i 9',eq,sol,[rootSet(roots.slice(1)),rootSet([1,2,3]),rootSet([-2,-1,0])],`Fem t=3^x>0. Com que 3·27^{x-1}=t^3 i 9^x=t^2, obtenim t^3-${sum}t^2+${pair}t-${prod}=(t-${values[0]})(t-${values[1]})(t-${values[2]})=0. Així ${sol}.`,'Expressa 27^(x−1) i 9^x en funció de t=3^x. Resol el cúbic en t.');
+ }
+ }
+ case 'syslin':{
+ x=rr(-5,5);y=rr(-5,5);a=nz(-7,7);b=nz(-7,7);c=nz(-7,7);d=nz(-7,7);while(a*d-b*c===0){d=nz(-7,7)}
+ eq=mat([`${a}x${b<0?'':'+'}${b}y=${a*x+b*y}`,`${c}x${d<0?'':'+'}${d}y=${c*x+d*y}`]);sol=`(x,y)=(${x},${y})`;
+ return makeQ('Resol el sistema lineal per reducció',eq,sol,[`(x,y)=(${y},${x})`,`(x,y)=(${x+1},${y})`,`(x,y)=(${x},${y-1})`],`Eliminem una incògnita multiplicant les equacions per coeficients adients. La solució (${x},${y}) verifica les dues igualtats.`,'Busca el mcm dels coeficients d’una incògnita i elimina-la.');}
+ case 'sysnon':{
+ a=rr(1,5);b=rr(2,6);if(a===b)b++;
+ let s=a+b,p=a*b;
+ if(!hard){eq=mat([`x+y=${s}`,`x^2+y^2=${a*a+b*b}`]);sol=`\\{(${a},${b}),(${b},${a})\\}`;wrong=[`\\{(${a},${b})\\}`,`\\{(${-a},${-b}),(${-b},${-a})\\}`,'\\varnothing'];}
+ else {eq=mat([`x^2+y^2=${a*a+b*b}`,`xy=${p}`]);sol=`\\{(${a},${b}),(${b},${a}),(${-a},${-b}),(${-b},${-a})\\}`;wrong=[`\\{(${a},${b}),(${b},${a})\\}`,`\\{(${a},${b}),(${-a},${b})\\}`,'\\varnothing'];}
+ return makeQ('Resol el sistema no lineal i troba totes les parelles',eq,sol,wrong,`Utilitzem (x+y)²=x²+y²+2xy i (x−y)²=x²+y²−2xy. La llista completa és ${sol}.`,'No oblidis les diferents combinacions de signes.');}
+ case 'sysspecial':{
+ x=rr(1,5);y=rr(1,5);a=rr(2,4);
+ eq=hard?mat([`\\log_{${a}}(x+y)=\\log_{${a}}(${x+y})`,`x-y=${x-y}`]):mat([`${a}^x\\cdot ${a}^y=${a}^{${x+y}}`,`2x-y=${2*x-y}`]);
+ sol=`(x,y)=(${x},${y})`;return makeQ(hard?'Resol el sistema logarítmic amb domini':'Resol el sistema exponencial',eq,sol,[`(x,y)=(${y},${x})`,`(x,y)=(${x+1},${y-1})`,`(x,y)=(${-x},${y})`],`Transformem la primera equació en x+y=${x+y}; combinem amb la segona i verifiquem (${x},${y}).`,'Aplica logaritmes o iguala exponents per transformar el sistema en lineal.');}
+ case 'ineq1':{
+ x=rr(-6,6);a=nz(-7,7);b=nz(-7,7);c=nz(-7,7);d=rr(2,6);let slope=a-c;while(!slope){c=nz(-7,7);slope=a-c};let rhs=a*x+b-c*x;
+ // a(x+b)-c x <= RHS with coef slope; define RHS to have root x.
+ eq=hard?`\\frac{${a}(x${sg(b)})}{${d}}-\\frac{${c}x}{${d}}\\geq ${F(a*x+a*b-c*x,d)}`:`${a}(x${sg(b)})${c<0?'+':'-'}${Math.abs(c)}x\\geq ${a*x+a*b-c*x}`;
+ sol=slope>0?`x\\geq ${x}`:`x\\leq ${x}`;
+ return makeQ('Resol la inequació i vigila el signe',eq,sol,[slope>0?`x\\leq ${x}`:`x\\geq ${x}`,`x>${x}`,`x<${x+1}`],`Desenvolupem i reunim els termes: ${slope}x ≥ ${slope*x}. ${slope<0?'Dividint per un nombre negatiu invertim la desigualtat.':'Dividint per un nombre positiu la mantenim.'}`,'Si el coeficient final de x és negatiu, gira el signe de la desigualtat.');}
+ case 'ineq2':{
+ a=rr(1,5);b=rr(a+1,9);c=rr(b+1,12);
+ eq=hard?`${poly(rootsPoly([a,b,c],rr(2,4)))}\\leq 0`:`${poly(rootsPoly([a,b],rr(2,4)))}<0`;
+ sol=hard?`x\\in(-\\infty,${a}]\\cup[${b},${c}]`:`x\\in(${a},${b})`;
+ return makeQ('Resol la inequació polinòmica amb taula de signes',eq,sol,[hard?`x\\in[${a},${b}]\\cup[${c},+\\infty)`:`x\\in(-\\infty,${a})\\cup(${b},+\\infty)`,`x\\in[${a},${b}]`,`x\\in(${b},${c})`],`Factoritzem, ordenem les arrels i estudiem el signe en cada interval. Conjunt solució: ${sol}.`,'Grau senar: els signes alternen si les arrels són simples. Els extrems s’inclouen només amb ≤ o ≥.');}
+ case 'ineqsys1':{
+ a=rr(1,6);b=rr(a+2,11);c=rr(2,5);
+ eq=mat([`\\frac{2x-${2*a}}{${c}} > 0`,`3(x-${b})\\leq 0`]);sol=`x\\in(${a},${b}]`;
+ return makeQ('Resol el sistema d’inequacions de primer grau',eq,sol,[`x\\in[${a},${b}]`,`x\\in(${a},${b})`,`x\\in(-\\infty,${a})\\cup[${b},+\\infty)`],`La primera inequació dóna x>${a} i la segona dóna x≤${b}; prenem-ne la intersecció.`,'Resol per separat, dibuixa els intervals i queda’t amb la intersecció.');}
+ case 'ineqxy':{
+ a=nz(-5,5);b=nz(-5,5);c=rr(2,10);let sign=pick(['\\geq','\\leq']);
+ eq=`${a}x${b<0?'':'+'}${b}y${sign}${c}`;let co=sign==='\\geq'?1:-1;let sense=(b>0?co:-co)>0?'\\geq':'\\leq';sol=`y${sense}${F(c,b)}${(-a/b)>=0?'+':'-'}${F(Math.abs(a),Math.abs(b))}x`;
+ return makeQ('Aïlla y i identifica el semiplà',eq,sol,[`y${sense==='\\geq'?'\\leq':'\\geq'}${F(c,b)}-${F(a,b)}x`,`y${sense}${F(c,a)}-${F(b,a)}x`,`y${sense}${F(-c,b)}-${F(a,b)}x`],`Aïllem y i dividim pel coeficient ${b}. ${b<0?'Com que és negatiu, invertim la desigualtat.':'Com que és positiu, mantenim la desigualtat.'}`,'Si el coeficient de y és negatiu, cal invertir ≤ i ≥.');}
+ case 'ineqsys2':{
+ a=rr(1,4);b=rr(1,4);c=rr(3,7);d=rr(3,6);
+ eq=mat([`2x+y\\geq ${2*a+b}`,`x+2y\\geq ${a+2*b}`,`x+y\\leq ${a+b+2}`]);sol=`(${a},${b})`;
+ return makeQ('Quin punt compleix simultàniament les tres inequacions?',eq,sol,[`(${a-1},${b})`,`(${a},${b-1})`,`(${a+3},${b+3})`],`Provem els punts en les tres desigualtats. (${a},${b}) satisfà les dues cotes inferiors i la superior.`,'Totes tres condicions s’han de complir al mateix temps.');}
+ default:return null;
+ }
+}
+
+// Dos subapartats independents: vocabulari algebraic i problemes amb context.
+function languageQuestion(sub,l){
+ if(sub==='translate'){
+  const n=R(2,9),m=R(2,7),k=R(2,5);
+  // Cada entrada és [enunciat, expressió correcta, tres confusions habituals, explicació].
+  let easy=[
+   [`El doble d'un nombre`,`2x`,[`x+2`,`x^2`,`\\frac{x}{2}`],`Multiplica x per 2.`],
+   [`El triple d'un nombre`,`3x`,[`x+3`,`x^3`,`\\frac{x}{3}`],`Multiplica x per 3.`],
+   [`El consecutiu d'un nombre`,`x+1`,[`x-1`,`2x`,`x^2`],`El consecutiu de x és x+1.`],
+   [`L'anterior d'un nombre`,`x-1`,[`x+1`,`1-x`,`2x`],`L'anterior de x és x−1.`],
+   [`El triple del consecutiu d'un nombre`,`3(x+1)`,[`3x+1`,`x+3`,`3(x-1)`],`Primer pren el consecutiu i després multiplica per 3.`],
+   [`La meitat del nombre anterior`,`\\frac{x-1}{2}`,[`\\frac{x}{2}-1`,`2(x-1)`,`\\frac{x+1}{2}`],`Divideix tot x−1 entre 2.`],
+   [`El producte d'un nombre i el seu consecutiu`,`x(x+1)`,[`x+(x+1)`,`x(x-1)`,`2x+1`],`El producte és x·(x+1).`],
+   [`La suma de dos quadrats`,`x^2+y^2`,[`(x+y)^2`,`2(x+y)`,`x^2-y^2`],`Eleva els nombres al quadrat per separat.`],
+   [`El quadrat de la suma de dos nombres`,`(x+y)^2`,[`x^2+y^2`,`x+y^2`,`2(x+y)`],`Eleva tota la suma al quadrat.`],
+   [`La diferència d'un nombre i ${n}`,`x-${n}`,[`${n}-x`,`x+${n}`,`${n}x`],`Resta ${n} al nombre.`]
+  ];
+  let medium=[
+   [`El quadrat de la diferència de dos nombres`,`(x-y)^2`,[`x^2-y^2`,`(x+y)^2`,`x^2+y^2`],`Eleva al quadrat tota la diferència x−y.`],
+   [`La meitat d'un nombre augmentat en ${n} unitats`,`\\frac{x+${n}}{2}`,[`\\frac{x}{2}+${n}`,`2(x+${n})`,`\\frac{x-${n}}{2}`],`Augmenta el nombre i divideix el resultat per 2.`],
+   [`El triple de la suma d'un nombre i ${n}`,`3(x+${n})`,[`3x+${n}`,`x+3${n}`,`3(x-${n})`],`El triple afecta tota la suma.`],
+   [`La suma del triple d'un nombre i ${n}`,`3x+${n}`,[`3(x+${n})`,`x+3${n}`,`3x-${n}`],`Aquí només el nombre queda multiplicat per 3.`],
+   [`El quadrat del consecutiu d'un nombre`,`(x+1)^2`,[`x^2+1`,`(x-1)^2`,`2(x+1)`],`Eleva al quadrat x+1.`],
+   [`La tercera part de la diferència entre un nombre i ${m}`,`\\frac{x-${m}}{3}`,[`\\frac{x}{3}-${m}`,`3(x-${m})`,`\\frac{x+${m}}{3}`],`Divideix tota la diferència entre 3.`],
+   [`La suma de tres nombres consecutius`,`x+(x+1)+(x+2)`,[`3x+1`,`x+(x+1)+(x+3)`,`x(x+1)(x+2)`],`Els nombres són x, x+1 i x+2.`],
+   [`La diferència dels quadrats de dos nombres`,`x^2-y^2`,[`(x-y)^2`,`x^2+y^2`,`(x+y)^2`],`Resta dos quadrats, no elevïs la diferència.`],
+   [`El doble del quadrat d'un nombre menys ${n}`,`2x^2-${n}`,[`(2x)^2-${n}`,`2(x-${n})^2`,`(2x-${n})^2`],`Duplica el quadrat i després resta ${n}.`],
+   [`El quadrat de la suma d'un nombre i el seu anterior`,`(x+(x-1))^2`,[`x^2+(x-1)^2`,`(x+x+1)^2`,`x+(x-1)^2`],`Eleva la suma completa al quadrat.`]
+  ];
+  let difficult=[
+   [`La meitat del quadrat de la diferència de dos nombres`,`\\frac{(x-y)^2}{2}`,[`(\\frac{x-y}{2})^2`,`\\frac{x^2-y^2}{2}`,`2(x-y)^2`],`La meitat s'aplica al quadrat de la diferència.`],
+   [`El quadrat de la meitat de la diferència de dos nombres`,`\\left(\\frac{x-y}{2}\\right)^2`,[`\\frac{(x-y)^2}{2}`,`\\frac{x^2-y^2}{2}`,`\\frac{x^2+y^2}{4}`],`Primer divideix la diferència entre 2 i després eleva al quadrat.`],
+   [`El triple del quadrat de l'anterior d'un nombre`,`3(x-1)^2`,[`(3x-1)^2`,`3x^2-1`,`(3(x-1))^2`],`Eleva x−1 al quadrat i després triplica.`],
+   [`El quadrat del triple de l'anterior d'un nombre`,`(3(x-1))^2`,[`3(x-1)^2`,`(3x-1)^2`,`9x^2-1`],`Eleva al quadrat tot 3(x−1).`],
+   [`La diferència entre el quadrat d'una suma i la suma dels quadrats`,`(x+y)^2-(x^2+y^2)`,[`x^2+y^2-(x+y)^2`,`(x-y)^2-(x^2+y^2)`,`(x+y)^2-(x^2-y^2)`],`Distingeix el quadrat de la suma de la suma dels quadrats.`],
+   [`El producte de l'anterior i el consecutiu d'un nombre`,`(x-1)(x+1)`,[`(x-1)+(x+1)`,`x(x+1)`,`(x-1)^2`],`Multiplica x−1 per x+1.`],
+   [`La suma dels quadrats de tres nombres consecutius`,`x^2+(x+1)^2+(x+2)^2`,[`(x+(x+1)+(x+2))^2`,`x^2+(x+1)^2+(x+3)^2`,`3x^2+3`],`Eleva cada consecutiu al quadrat i suma.`],
+   [`La quarta part de la suma dels quadrats de dos consecutius`,`\\frac{x^2+(x+1)^2}{4}`,[`\\frac{(2x+1)^2}{4}`,`\\frac{x^2+(x-1)^2}{4}`,`\\frac{x^2+(x+1)^2}{2}`],`Divideix la suma dels quadrats per 4.`],
+   [`La diferència entre el quadrat d'un nombre i el del seu consecutiu`,`x^2-(x+1)^2`,[`(x-(x+1))^2`,`x^2+(x+1)^2`,`(x+1)^2-x^2`],`Resta el quadrat de x+1 al de x.`],
+   [`El doble del producte d'un nombre i el seu anterior`,`2x(x-1)`,[`2x(x+1)`,`(2x)(2x-1)`,`2x+(x-1)`],`Duplica el producte x(x−1).`]
+  ];
+  let pool=l===1?easy:l===2?medium.concat(easy.slice(3,7)):difficult.concat(medium.slice(4,9));
+  let item=P(pool);
+  return makeQ(`Expressa algebraicament: «${item[0]}».`, '\\text{Fes servir }x\\text{ (i }y\\text{ si cal)}',item[1],item[2],item[3],'Identifica quina operació es fa primer; «el quadrat de la suma» no és «la suma dels quadrats».');
+ }
+ const problem=x=>{
+  const shift=R(2,11),d=R(2,9),k=R(2,5),m=R(2,5),h=R(2,7);
+  const res=(question,eq,answer=x,ex='')=>({question,eq,answer,ex});
+  const easy=[
+   ()=>res(`Troba un nombre tal que, si hi sumem ${shift} i multipliquem el resultat per ${k}, obtenim ${k*(x+shift)}.`,`${k}(x+${shift})=${k*(x+shift)}`),
+   ()=>res(`Troba un nombre tal que el seu triple menys ${d} sigui ${3*x-d}.`,`3x-${d}=${3*x-d}`),
+   ()=>res(`Troba tres nombres enters consecutius que sumin ${3*x+3}. Quin és el primer?`,`x+(x+1)+(x+2)=${3*x+3}`),
+   ()=>res(`Troba un nombre tal que el doble del seu consecutiu més l'anterior sigui ${3*x+1}.`,`2(x+1)+(x-1)=${3*x+1}`),
+   ()=>res(`Troba un nombre tal que la diferència entre el seu quàdruple i el seu consecutiu sigui ${3*x-1}.`,`4x-(x+1)=${3*x-1}`)
+  ];
+  const medium=[
+   ()=>res(`Troba un nombre tal que el triple del seu consecutiu menys el doble del seu anterior sigui ${x+5}.`,`3(x+1)-2(x-1)=${x+5}`),
+   ()=>res(`Troba un nombre tal que la suma de la seva meitat i la tercera part del seu consecutiu sigui ${F(5*x+2,6)}.`,`\\frac{x}{2}+\\frac{x+1}{3}=${F(5*x+2,6)}`),
+   ()=>res(`Troba un nombre tal que, en restar ${shift} del seu doble i dividir el resultat entre ${k}, s'obtingui ${F(2*x-shift,k)}.`,`\\frac{2x-${shift}}{${k}}=${F(2*x-shift,k)}`),
+   ()=>res(`Troba un nombre tal que la tercera part de la suma del nombre i ${shift}, menys la quarta part del seu anterior, sigui ${F(x+4*shift+3,12)}.`,`\\frac{x+${shift}}{3}-\\frac{x-1}{4}=${F(x+4*shift+3,12)}`),
+   ()=>res(`Troba tres nombres senars consecutius que sumin ${3*x+6}. Quin és el primer?`,`x+(x+2)+(x+4)=${3*x+6}`),
+   ()=>res(`Troba un nombre tal que el quadrat del seu consecutiu menys el quadrat del nombre sigui ${2*x+1}.`,`(x+1)^2-x^2=${2*x+1}`),
+   ()=>res(`Troba un nombre tal que el doble de la diferència entre el nombre i ${d}, menys la tercera part del nombre sigui ${F(5*x-6*d,3)}.`,`2(x-${d})-\\frac{x}{3}=${F(5*x-6*d,3)}`),
+   ()=>res(`Troba dos nombres enters consecutius la diferència dels quadrats dels quals sigui ${2*x+1}. Quin és el menor?`,`(x+1)^2-x^2=${2*x+1}`)
+  ];
+  const difficult=[
+   ()=>res(`Troba un nombre tal que les tres quartes parts de la suma del nombre i ${shift}, menys les dues cinquenes parts de la diferència entre el nombre i ${d}, siguin ${F(7*x+15*shift+8*d,20)}.`,`\\frac{3(x+${shift})}{4}-\\frac{2(x-${d})}{5}=${F(7*x+15*shift+8*d,20)}`),
+   ()=>res(`Troba un nombre tal que la diferència entre el quadrat del nombre augmentat en ${shift} i el quadrat del nombre disminuït en ${d} sigui ${(2*(shift+d))*x+shift*shift-d*d}.`,`(x+${shift})^2-(x-${d})^2=${2*(shift+d)*x+shift*shift-d*d}`),
+   ()=>res(`Troba un nombre tal que la meitat de la suma del seu triple i ${shift}, menys la tercera part de la diferència entre el seu doble i ${d}, sigui ${F(5*x+3*shift+2*d,6)}.`,`\\frac{3x+${shift}}{2}-\\frac{2x-${d}}{3}=${F(5*x+3*shift+2*d,6)}`),
+   ()=>res(`Troba un nombre tal que la diferència entre el producte dels seus dos consecutius i el seu quadrat sigui ${3*x+2}.`,`(x+1)(x+2)-x^2=${3*x+2}`),
+   ()=>res(`Troba un nombre tal que la suma de la meitat del seu anterior i les tres quartes parts del seu consecutiu sigui ${F(5*x+1,4)}.`,`\\frac{x-1}{2}+\\frac{3(x+1)}{4}=${F(5*x+1,4)}`),
+   ()=>res(`Troba tres nombres enters consecutius tal que la suma del quadrat del més gran menys el quadrat del més petit sigui ${4*x+4}. Quin és el més petit?`,`(x+2)^2-x^2=${4*x+4}`),
+   ()=>res(`Troba un nombre tal que, si al doble de la seva tercera part li sumes la meitat del seu consecutiu i li restes ${d}, obtens ${F(7*x+3-6*d,6)}.`,`\\frac{2x}{3}+\\frac{x+1}{2}-${d}=${F(7*x+3-6*d,6)}`),
+   ()=>res(`Troba un nombre tal que la cinquena part de la diferència entre el seu triple i ${shift}, més la meitat de la suma del seu doble i ${d}, sigui ${F(16*x-2*shift+5*d,10)}.`,`\\frac{3x-${shift}}{5}+\\frac{2x+${d}}{2}=${F(16*x-2*shift+5*d,10)}`)
+  ];
+  const candidates=l===1?easy:l===2?medium:difficult;
+  const item=P(candidates)();
+  const answer=String(item.answer);
+  const wrong=[String(item.answer+1),String(item.answer-2),String(item.answer+R(3,6)),String(-item.answer)].filter(s=>s!==answer);
+  return makeQ(item.question,'\\text{Defineix }x\\text{ i planteja una equació}',answer,wrong,`${item.ex||`L'equació és ${item.eq}. En resoldre-la obtenim x=${item.answer}.`} Substitueix el valor a l'enunciat per comprovar-lo.`,'Representa el nombre amb x. Si es parla de consecutius, fes servir x+1, x+2, etc.',{workingEquation:item.eq});
+ };
+ return problem(R(l===3?12:6,l===3?72:48));
+}
+function qgen(sub,l){if(sub==='translate'||sub==='numberproblem')return languageQuestion(sub,l);if(l>=2){let enhanced=hardQuestion(sub,l);if(enhanced)return enhanced;}let a,b,c,d,e,x,y,n,k,q,w,ans,z,ex,h,opts;
+switch(sub){
+case 'numeric':a=nz(-5,5);b=nz(-5,5);x=nz(-3,4);n=l===1?1:l===2?2:3;ans=a*x*x+b*x+n;return makeQ('Calcula el valor numèric quan',`A(x)=${a}x^2${sg(b)}x+${n},\\quad x=${x}`,`${ans}`,[`${ans+1}`,`${ans-2}`,`${-ans}`],`Substituïm x per ${x}: ${a}\\cdot(${x})^2+(${b})\\cdot(${x})+${n}=${ans}.`,'Respecta l’ordre de les operacions i calcula primer les potències.');
+case 'monoms':a=nz(2,7);b=nz(2,6);n=R(1,l+1);k=R(1,l+2);if(Math.random()<.5)return makeQ('Multiplica els monomis',`${a}x^{${n}}\\cdot ${b}x^{${k}}`,`${a*b}x^{${n+k}}`,[`${a*b}x^{${n*k}}`,`${a+b}x^{${n+k}}`,`${a*b}x^{${n}}`],`Multipliquem coeficients (${a}·${b}) i sumem exponents (${n}+${k}).`,'En un producte de potències amb la mateixa base, se sumen els exponents.');return makeQ('Divideix els monomis',frac(`${a*b}x^{${n+k}}`,`${b}x^{${k}}`),`${a}x^{${n}}`,[`${a}x^{${n+k}}`,`${b}x^{${n}}`,`${a}x^{${k}}`],`Dividim coeficients i restem exponents.`,'En una divisió de potències amb la mateixa base, restem exponents.');
+case 'polys':a=R(1,5);b=R(1,5);c=nz(-6,6);d=nz(-6,6);k=l===1?0:R(1,2);if(k===0)return makeQ('Calcula A(x)+B(x)',`A(x)=${a}x${sg(c)},\\quad B(x)=${b}x${sg(d)}`,`${a+b}x${sg(c+d)}`,[`${a-b}x${sg(c+d)}`,`${a+b}x${sg(c-d)}`,`${a+b}x${sg(c+d+1)}`],`Agrupem termes semblants: (${a}+${b})x+(${c}+${d}).`,'Agrupa les x amb les x i els nombres amb els nombres.');return makeQ('Multiplica els polinomis',`(${fmt(a,c)})(${fmt(b,d)})`,poly([a*b,a*d+b*c,c*d]),[poly([a*b,a*d+b*c,a*d]),poly([a*b,a*d+b*c+1,c*d]),poly([a*b,c+d,c*d])],`Apliquem la distributiva: ${a*b}x²+(${a*d}+${b*c})x+(${c*d}).`,'Multiplica cada terme del primer parèntesi per tots els del segon.');
+case 'combined':a=R(1,4);b=R(1,4);c=R(1,5);return makeQ('Redueix l’expressió',`${a}(x+${b})-${c}(x-${b})`,`${a-c}x${sg((a+c)*b)}`,[`${a+c}x${sg((a-c)*b)}`,`${a-c}x${sg((a-c)*b)}`,`${a+c}x${sg((a+c)*b)}`],`Distributiva: ${a}x+${a*b}-${c}x+${c*b}. Després agrupem termes semblants.`,'El signe menys davant del segon parèntesi canvia els signes.');
+case 'notables':a=R(1,5);b=R(1,7);if(Math.random()<.5)return makeQ('Desenvolupa la identitat notable',`(${a}x+${b})^2`,poly([a*a,2*a*b,b*b]),[poly([a*a,a*b,b*b]),poly([a*a,2*a*b,-b*b]),poly([a*a,2*a*b,b])],`(u+v)²=u²+2uv+v²; el terme central és 2·${a}x·${b}.`,'Recorda els tres termes del quadrat d’una suma.');return makeQ('Reconeix la identitat notable',poly([a*a,-2*a*b,b*b]),`(${a}x-${b})^2`,[`(${a}x+${b})^2`,`(${a}x-${b})(${a}x+${b})`,`(${a*a}x-${b*b})^2`],`És un quadrat perfecte: (${a}x)²−2·(${a}x)·${b}+${b}².`,'Comprova els quadrats dels extrems i el doble producte central.');
+case 'factor':a=R(2,6);b=R(1,5);n=l===1?1:R(1,3);return makeQ('Extreu el màxim factor comú',`${a*b}x^{${n+1}}+${a*(b+2)}x^{${n}}`,`${a}x^{${n}}(${b}x+${b+2})`,[`${a}x(${b}x+${b+2})`,`${a}x^{${n}}(${b}x+${b})`,`${b}x^{${n}}(${a}x+${a+2})`],`Traiem ${a}x^${n} de tots dos termes.`,'Busca el MCD dels coeficients i la menor potència de x.');
+case 'factoring':a=R(1,5);b=R(1,6);return makeQ('Factoritza el polinomi',`x^2${sg(-(a+b))}x+${a*b}`,`(x-${a})(x-${b})`,[`(x+${a})(x+${b})`,`(x-${a})(x+${b})`,`(x-${a+1})(x-${b})`],`Les arrels són ${a} i ${b}; per això apareixen els factors (x−${a}) i (x−${b}).`,'Troba dos nombres amb suma '+(a+b)+' i producte '+a*b+'.');
+case 'fractions':a=R(2,6);b=R(1,6);return makeQ('Simplifica la fracció algebraica (sense oblidar les restriccions)',frac(`x^2-${a*a}`,`x-${a}`),`x+${a},\\; x\\neq ${a}`,[`x-${a},\\;x\\neq ${a}`,`x+${a}`,`x^2+${a}`],`x²−${a*a}=(x−${a})(x+${a}). Cancel·lem el factor, però x=${a} continua prohibit.`,'Factoritza el numerador com una diferència de quadrats.');
+case 'translate':a=R(2,6);b=R(1,9);return makeQ('Escriu en llenguatge algebraic: «El triple d’un nombre augmentat en '+b+' és '+(3*a+b)+'».',`\\text{Anomenem }x\\text{ el nombre}`,`3x+${b}=${3*a+b}`,[`3(x+${b})=${3*a+b}`,`x^3+${b}=${3*a+b}`,`3x-${b}=${3*a+b}`],`«El triple d’un nombre» és 3x; després hi sumem ${b}.`,'Distingeix «el triple d’un nombre, més b» de «el triple de la suma».');
+case 'numberproblem':a=R(3,13);b=R(3,7);return makeQ('Troba el nombre que compleix: «Si al doble del nombre li sumem '+b+', obtenim '+(2*a+b)+'».',`2x+${b}=${2*a+b}`,`${a}`,[`${a+1}`,`${a-1}`,`${2*a}`],`2x=${2*a}, d’on x=${a}.`,'Primer resta '+b+' als dos costats.');
+case 'first':{
+// El nivell mitjà de Batxillerat ha d'exigir desenvolupament i reducció real.
+const xx=R(-7,8), nzSmall=()=>nz(-5,5), coef=(v)=>v===1?'x':v===-1?'-x':`${v}x`;
+const lin=(m,n)=>`${coef(m)}${n===0?'':sg(n)}`;
+let A,B,C,D,E,F,G,H,T,expr,explain;
+if(l===1){
+ A=nz(2,6);B=nz(-8,8);C=nz(-5,5);while(C===A)C=nz(-5,5);
+ D=A*(xx+B)-C*xx;
+ expr=`${A}(x${sg(B)})=${lin(C,D)}`;
+ explain=`Desenvolupem: ${lin(A,A*B)}=${lin(C,D)}. Agrupem els termes amb x i obtenim x=${xx}.`;
+}else if(l===2){
+ A=nzSmall();B=nz(-7,7);C=nzSmall();D=nz(-7,7);E=nzSmall();F=nz(-7,7);G=nzSmall();
+ // A(x+B)+C(x+D) = E(x+F)+Gx+T: determina T perquè xx sigui l'única arrel.
+ while(A+C===E+G){G=nzSmall()}
+ T=(A+C-E-G)*xx+A*B+C*D-E*F;
+ expr=`${A}(x${sg(B)})${C>0?'+':''}${C}(x${sg(D)})=${E}(x${sg(F)})${G>0?'+':''}${coef(G)}${sg(T)}`;
+ explain=`Desenvolupem els parèntesis i reduïm: ${lin(A+C,A*B+C*D)}=${lin(E+G,E*F+T)}. Passem les x a un membre i les constants a l'altre. Obtenim x=${xx}.`;
+}else{
+ A=nzSmall();B=nz(-7,7);C=nzSmall();D=nz(-7,7);E=nzSmall();F=nz(-7,7);G=nzSmall();H=nz(-6,6);
+ // A[B(x+C) - D(x-E)] + F(x+G) = Hx + T
+ let slope=A*(B-D)+F;while(slope===H){H=nz(-6,6)}
+ T=(slope-H)*xx+A*(B*C+D*E)+F*G;
+ expr=`${A}\\left[${B}(x${sg(C)})${D>0?'-':'+'}${Math.abs(D)}(x${sg(-E)})\\right]${F>0?'+':''}${F}(x${sg(G)})=${lin(H,T)}`;
+ explain=`Primer desenvolupem el claudàtor interior; després multipliquem pel factor exterior. Reduïm termes semblants i aïllem la incògnita: x=${xx}.`;
+}
+const wrong=unique([xx+1,-xx,xx-2,xx+2,xx-1,xx+3].filter(v=>v!==xx)).slice(0,3).map(String);
+return makeQ('Resol l’equació de primer grau',expr,String(xx),wrong,explain,'Desenvolupa tots els parèntesis, redueix els termes semblants i després aïlla la x.');
+}
+case 'firstfrac':{
+const xx=R(-6,7),ds=l===1?[2,3,2]:l===2?[2,3,4]:[3,4,6];
+const [d1,d2,d3]=ds,aa=nz(-6,6),cc=nz(-6,6),ff=nz(-6,6),u=nz(-5,5),v=nz(-5,5),t=nz(-5,5);
+const bb=d1*u-aa*xx,ee=d2*v-cc*xx,gg=d3*(u-v-t)-ff*xx;
+const slope=aa/d1-cc/d2-ff/d3;
+if(Math.abs(slope)<1e-8)return qgen(sub,l);
+const L=(m,n)=>`${m===1?'x':m===-1?'-x':`${m}x`}${n===0?'':sg(n)}`;
+const sign=(v)=>v>=0?`+${v}`:`${v}`;
+let expr=l===1?`${frac(L(aa,bb),d1)}-${frac(L(cc,ee),d2)}=${frac(L(ff,gg),d3)}${sign(t)}`:
+ l===2?`${frac(L(aa,bb),d1)}-${frac(L(cc,ee),d2)}=${frac(L(ff,gg),d3)}${sign(t)}`:
+ `${frac(L(aa,bb),d1)}-\\left(${frac(L(cc,ee),d2)}\\right)=${frac(L(ff,gg),d3)}${sign(t)}`;
+const explain=`Multipliquem tots els termes pel mcm dels denominadors (${lcm(lcm(d1,d2),d3)}), desenvolupem els numeradors i reduïm els termes amb x. El resultat és x=${xx}.`;
+const wrong=unique([xx+1,-xx,xx-2,xx+2,xx-1,xx+3].filter(v=>v!==xx)).slice(0,3).map(String);
+return makeQ('Resol l’equació amb fraccions',expr,String(xx),wrong,explain,'Calcula el mcm dels denominadors i multiplica CADA terme, inclòs el terme independent.');
+}
+case 'second':a=R(-6,3);b=R(1,6);return makeQ('Resol l’equació completa',equationOfRoots(a,b),rootOptions([a,b]),[rootOptions([a,-b]),rootOptions([-a,b]),rootOptions([a+1,b+1])],`Amb la fórmula de segon grau, o factoritzant, obtenim les arrels x=${a} i x=${b}.`,'Identifica a, b i c i aplica la fórmula general.');
+case 'secondinc':a=R(2,7);if(Math.random()<.5)return makeQ('Resol l’equació incompleta',`x^2-${a*a}=0`,rootOptions([-a,a]),[rootOptions([a]),rootOptions([-a]),'\\varnothing'],`x²=${a*a}, així que x=±${a}.`,'Aïlla x² i no oblidis les dues arrels.');return makeQ('Resol traient factor comú',`x^2-${a}x=0`,rootOptions([0,a]),[rootOptions([a]),rootOptions([-a,0]),rootOptions([-a])],`x(x−${a})=0. Cada factor pot ser zero.`,'Extreu x com a factor comú.');
+case 'secondarr':a=R(1,4);b=R(1,4);c=R(2,5);return makeQ('Resol: primer has de reduir i ordenar',`(x-${a})(x-${b})=${c}x-${c}x`,rootOptions([a,b]),[rootOptions([-a,-b]),rootOptions([a]),rootOptions([b+1,a])],`Al costat dret, ${c}x−${c}x=0. Desenvolupem i resolem (x−${a})(x−${b})=0.`,'Abans de la fórmula, desenvolupa i passa-ho tot a un costat.');
+case 'ruffini':a=R(1,3);b=R(1,5);c=R(1,4);let roots=[a,b,-c];let C=[1,-a-b+c,a*b-c*(a+b),a*b*c];if(l>=2){C=[...C,0];}return makeQ('Resol l’equació polinòmica amb Ruffini'+(l>=2?' (observa el factor comú)':''),`${poly(C)}=0`,rootOptions(l>=2?[0,...roots]:roots),[rootOptions([a,b]),rootOptions([a,-b,-c]),rootOptions([a,b,c])],`Factorització: ${(l>=2?'x':'')} (x−${a})(x−${b})(x+${c})=0. Arrels ${rootOptions(l>=2?[0,...roots]:roots)}.`,'Prova primer divisors del terme independent; si tots els termes tenen x, treu-la abans.');
+case 'biquad':a=R(1,4);b=R(a+1,6);return makeQ('Fes el canvi t=x² i resol',`x^4-${a*a+b*b}x^2+${a*a*b*b}=0`,rootOptions([-b,-a,a,b]),[rootOptions([-a,a]),rootOptions([-b,b]),rootOptions([a,b])],`t²−${a*a+b*b}t+${a*a*b*b}=0. t=${a*a} o t=${b*b}; x=±${a}, ±${b}.`,'Una biquadrada és una equació de segon grau en x².');
+case 'triquad':a=R(1,2);b=a+1;c=b+1;let v=a*a,w=b*b,z=c*c;return makeQ('Fes el canvi t=x²; busca les arrels de t amb Ruffini',`x^6-${v+w+z}x^4+${v*w+v*z+w*z}x^2-${v*w*z}=0`,rootOptions([-c,-b,-a,a,b,c]),[rootOptions([-b,-a,a,b]),rootOptions([a,b,c]),rootOptions([-c,c])],`Amb t=x², el polinomi és (t−${v})(t−${w})(t−${z})=0. Tornem a x.`,'Primer tracta-la com un cúbic en t. Després resol x²=t.');
+case 'rational':a=R(1,6);b=R(1,6);return makeQ('Resol i comprova les restriccions',`${frac('x+'+b,'x-'+a)}=${frac(a+b,1)}`,`${a+1}`,[`${a}`,`${a+2}`,`${-a}`],`x≠${a}. Multiplicant: x+${b}=(${a+b})(x−${a}).`, 'El denominador no pot ser zero.');
+case 'radical':a=R(1,6);b=R(1,4);x=a*a-b;return makeQ('Resol i comprova el resultat',`\\sqrt{x+${b}}=${a}`,`${x}`,[`${a-b}`,`${a*a+b}`,`${-x}`],`Elevem al quadrat: x+${b}=${a*a}; x=${x}. Comprovem substituint.`,'Aïlla l’arrel i eleva al quadrat els dos membres.');
+case 'log':a=R(2,8);b=R(2,6);return makeQ('Resol l’equació logarítmica',`\\log_2(x+${b})=${a}`,`${2**a-b}`,[`${a-b}`,`${a+b}`,`${2**a+b}`],`x+${b}=2^${a}=${2**a}. El domini exigeix x+${b}>0.`,'Converteix el logaritme en una potència; comprova el domini.');
+case 'exp':a=R(2,5);b=R(1,4);return makeQ('Resol l’equació exponencial',`2^{x+${b}}=2^{${a+b}}`,`${a}`,[`${a+b}`,`${a-b}`,`${-a}`],`Com que les bases són iguals i diferents d’1, igualem exponents: x+${b}=${a+b}.`,'Busca una base comuna i iguala els exponents.');
+case 'syslin':x=R(-3,5);y=R(-3,5);a=R(1,4);b=R(1,4);c=R(1,4);d=R(1,4);if(a*d===b*c)d++;return makeQ('Resol el sistema lineal',`\\begin{cases}${a}x+${b}y=${a*x+b*y}\\\\${c}x+${d}y=${c*x+d*y}\\end{cases}`,`(x,y)=(${x},${y})`,[`(x,y)=(${y},${x})`,`(x,y)=(${x+1},${y})`,`(x,y)=(${-x},${y})`],`Pots utilitzar reducció, substitució o igualació. La parella (${x},${y}) verifica les dues equacions.`,'Tria una variable per eliminar; multiplica una equació si cal.');
+case 'sysnon':x=R(1,4);y=R(1,4);if(l===1)return makeQ('Resol el sistema no lineal',`\\begin{cases}x+y=${x+y}\\\\xy=${x*y}\\end{cases}`,`\\{(${x},${y}),(${y},${x})\\}`,[`\\{(${x},${y})\\}`,`\\{(${-x},${y})\\}`,'\\varnothing'],`De x+y=${x+y}, substituïm y=${x+y}−x al producte i resolem el quadràtic.`,'Aïlla y de l’equació lineal i substitueix-la a l’altra.');if(l===2)return makeQ('Resol el sistema per reducció',`\\begin{cases}x^2+y^2=${x*x+y*y}\\\\x^2-y^2=${x*x-y*y}\\end{cases}`,`(x,y)=(\\pm ${x},\\pm ${y})`,[`(x,y)=(${x},${y})`,`(x,y)=(\\pm ${y},\\pm ${x})`,'\\varnothing'],`Sumant equacions: 2x²=${2*x*x}. Restant: 2y²=${2*y*y}. Combina els signes.`,'Suma les dues equacions per eliminar y².');return makeQ('Resol el sistema no lineal',`\\begin{cases}x^2+y^2=${x*x+y*y}\\\\xy=${x*y}\\end{cases}`,`\\{(${x},${y}),(${y},${x}),(${-x},${-y}),(${-y},${-x})\\}`,[`\\{(${x},${y}),(${y},${x})\\}`,'\\varnothing',`\\{(${x},${y}),(${-x},${y})\\}`],`De (x+y)²=x²+y²+2xy i (x−y)²=x²+y²−2xy deduïm les possibles parelles.`,'Fes servir les identitats notables de (x+y)² i (x−y)².');
+case 'sysspecial':x=R(1,4);y=R(1,4);return makeQ('Resol el sistema exponencial',`\\begin{cases}2^x\\cdot 2^y=2^{${x+y}}\\\\x-y=${x-y}\\end{cases}`,`(x,y)=(${x},${y})`,[`(x,y)=(${y},${x})`,`(x,y)=(${x+1},${y+1})`,'\\varnothing'],`La primera equació equival a x+y=${x+y}; la segona ja és lineal.`,'Aplica la propietat del producte de potències de la mateixa base.');
+case 'ineq1':a=R(2,6);x=R(-4,7);b=R(-8,7);let sense=Math.random()<.5?'>':'<';return makeQ('Resol la inequació',`${a}x${sg(b)}${sense}${a*x+b}`,sense==='>'?`x>${x}`:`x<${x}`,[sense==='>'?`x<${x}`:`x>${x}`,`x\\geq ${x}`,`x${sense}${x+1}`],`Restem ${b} i dividim per ${a}>0: x ${sense} ${x}.`,'El signe només canvia si multipliques o divideixes per un nombre negatiu.');
+case 'ineq2':a=R(1,4);b=R(a+1,8);return makeQ('Resol amb una taula de signes',`(x-${a})(x-${b})<0`,`x\\in(${a},${b})`,[`x\\in(-\\infty,${a})\\cup(${b},+\\infty)`,`x\\in[${a},${b}]`,`x\\in(${b},+\\infty)`],`El producte és negatiu només entre les arrels ${a} i ${b}; els extrems no s’inclouen.`,'Marca les arrels a la recta i estudia els signes per intervals.');
+case 'ineqsys1':a=R(1,5);b=R(a+2,10);return makeQ('Resol el sistema d’inequacions',`\\begin{cases}x>${a}\\\\x\\leq ${b}\\end{cases}`,`x\\in(${a},${b}]`,[`x\\in[${a},${b}]`,`x\\in(${a},${b})`,`x\\in(-\\infty,${a})`],`Prenem la intersecció dels dos intervals.`,'La solució ha de complir les dues condicions alhora.');
+case 'ineqxy':a=R(1,4);b=R(1,4);c=R(2,9);return makeQ('Quin semiplà compleix la inequació?',`${a}x+${b}y\\leq ${c}`,`y\\leq ${frac(c,b)}-${frac(a,b)}x`,[`y\\geq ${frac(c,b)}-${frac(a,b)}x`,`y\\leq ${frac(c,a)}-${frac(b,a)}x`,`y>${frac(c,b)}-${frac(a,b)}x`],`Aïllem y, dividim per ${b} positiu i conservem ≤. La recta límit és contínua.`,'Aïlla y i fixa’t si el signe canvia o no.');
+case 'ineqsys2':a=R(1,4);b=R(1,5);return makeQ('Quin punt pertany a la regió factible?',`\\begin{cases}x\\geq ${a}\\\\y\\geq ${b}\\\\x+y\\leq ${a+b+3}\\end{cases}`,`(${a+1},${b+1})`,[`(${a-1},${b+1})`,`(${a+1},${b-1})`,`(${a+4},${b+1})`],`Substituïm cada punt a les tres inequacions: (${a+1},${b+1}) les compleix totes.`,'Un punt factible ha de satisfer totes les desigualtats.');
+default:return makeQ('Calcula',`x+2=4`,'2',['3','1','4'],'x=2.','Aïlla x.');
+}}
+const theory={algebra:[['Valor numèric','Substitueix cada lletra pel valor indicat; vigila els signes i les potències.','A(-2)=3(-2)^2-5=7'],['Monomis i polinomis','Suma termes semblants; en productes aplica la distributiva.','(x+2)(x-3)=x^2-x-6'],['Identitats notables','Pots passar de parèntesis a polinomi i també a la inversa.','(a+b)^2=a^2+2ab+b^2'],['Factorització','Busca factor comú, identitats i arrels (Ruffini quan convingui).','x^2-9=(x-3)(x+3)'],['Fraccions algebraiques','Simplifica factors complets i conserva els valors exclosos del domini.','\\frac{x^2-4}{x-2}=x+2,\\quad x\\ne 2']],language:[['Traducció d’expressions','Una expressió algebraica no necessita cap signe igual. Distingeix el quadrat de la suma de la suma dels quadrats.','(x+y)^2\\neq x^2+y^2'],['Plantejament de problemes','Primer defineix x, després escriu una equació i finalment resol i comprova.','x+(x+1)+(x+2)=30']],linear:[['Parèntesis','Distributiva, agrupació dels termes i aïllament de x.','2(x+3)=x+9\\Rightarrow x=3'],['Denominadors','Multiplica TOTS els termes pel mcm dels denominadors.','\\frac{x+1}{2}=3\\Rightarrow x=5']],quadratic:[['Forma general','Cal arribar a ax²+bx+c=0 abans de substituir a la fórmula.','x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}'],['Incompletes','Si c=0, extreu x factor comú. Si b=0, aïlla x².','x^2-5x=x(x-5)']],higher:[['Ruffini','Prova divisors del terme independent. Si hi ha factor x, extreu-lo primer.','x^3-4x=x(x-2)(x+2)'],['Biquadrades i triquadrades','Posa t=x²: obtens una quadràtica o una cúbica en t. Després torna a x.','x^4-5x^2+4=0\\Rightarrow t^2-5t+4=0'],['Arrels reals','Si t és negativa, x²=t no té solucions reals.','x^2=-4\\Rightarrow\\varnothing\\; (\\mathbb R)']],special:[['Racionals','Anota primer els valors prohibits. Després elimina denominadors i comprova.','\\frac{x+1}{x-1}=2'],['Radicals','Aïlla el radical, eleva a la potència adequada i comprova possibles solucions extranyes.','\\sqrt{x+5}=3\\Rightarrow x=4'],['Logaritmes','Comprova que tots els arguments siguin positius.','\\log_2(x)=3\\Rightarrow x=8'],['Exponencials','Busca una base comuna o aplica logaritmes.','2^{x+1}=8\\Rightarrow x=2']],systems:[['Lineals','Reducció, substitució i igualació són estratègies vàlides.','\\begin{cases}x+y=5\\\\x-y=1\\end{cases}'],['No lineals','Aïlla o combina equacions i comprova CADA parella obtinguda.','\\begin{cases}x^2+y^2=5\\\\x+y=3\\end{cases}'],['Restriccions','En racionals/logarítmics, elimina els valors que fan expressions no definides.','\\log(x)>0\\Rightarrow x>0']],inequal:[['Una incògnita','Quan divideixes per un negatiu, inverteix la desigualtat.','-2x>6\\Rightarrow x<-3'],['Taules de signes','Ordena les arrels i prova el signe a cada interval.','(x-1)(x-4)<0\\Rightarrow x\\in(1,4)'],['Dues incògnites','Dibuixa la recta frontera, comprova un punt i ombreja el semiplà corresponent.','x+y\\leq 3'],['Sistemes','La regió solució és la intersecció de tots els semiplans.','x\\geq 0,\\quad y\\geq 0,\\quad x+y\\leq 3']]};
+function math(t,display=false){if(window.katex){try{return katex.renderToString(t,{throwOnError:false,displayMode:display,trust:false,strict:'ignore'})}catch(e){}}return `<span>${esc(t)}</span>`}function esc(t){return String(t).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function fitExerciseMath(){
+ document.querySelectorAll('.mathline').forEach(el=>{
+  const rendered=el.querySelector('.katex-html');
+  if(!rendered)return;
+  el.style.fontSize='';
+  const available=Math.max(1,el.clientWidth-8);
+  const natural=rendered.getBoundingClientRect().width;
+  if(!natural||natural<=available)return;
+  const base=parseFloat(getComputedStyle(el).fontSize);
+  // Escalem tota l'expressió (inclosos parèntesis, radicals i fraccions),
+  // en lloc de retallar-la o imposar un desplaçament horitzontal.
+  el.style.fontSize=(base*Math.min(1,available/natural)*.97)+'px';
+ });
+}
+function renderMath(){document.querySelectorAll('[data-tex]').forEach(el=>{el.innerHTML=math(el.getAttribute('data-tex'),el.classList.contains('mathline'))});fitExerciseMath()}window.renderMath=renderMath;
+window.addEventListener('resize',()=>{fitExerciseMath()});
+// Validació estructural: detecta opcions duplicades, respostes absents i resultats no representables.
+function validQuestion(q){return !!q&&typeof q.expr==='string'&&q.expr.length>0&&typeof q.prompt==='string'&&q.prompt.length>0&&typeof q.correct==='string'&&Array.isArray(q.options)&&q.options.length===4&&new Set(q.options).size===4&&q.options.includes(q.correct)&&typeof q.explanation==='string'&&typeof q.hint==='string'&& !/NaN|undefined|Infinity/.test(q.expr+' '+q.correct)}
+function safeQuestion(sub,l){for(let i=0;i<24;i++){try{let q=qgen(sub,l);if(validQuestion(q))return q}catch(e){console.warn('Generador:',sub,e)}}return makeQ('Resol l’equació','2(x+3)=14','4',['3','5','7'],'2x+6=14, per tant x=4.','Aplica la distributiva.')}
+function setUnit(u){if(state.exam)return;state.u=u;state.sub=units.find(v=>v.id===u).sub[0][0];state.level=2;state.keyboard=false;next()}
+function setSub(s){if(state.exam)return;state.sub=s;state.level=2;state.keyboard=false;next()}
+function setLevel(l){if(state.exam)return;state.level=l;next()}
+function next(){if(state.exam)return;state.q=safeQuestion(state.sub,state.level);state.answered=false;state.selected=-1;state.phase=0;state.guided=false;state.guideStep=0;state.guideChoice=null;state.keyboard=false;state.kinput='';state.notice='';render()}
+function recordAnswer(q,sub,level,ok){state.attempts++;if(ok){state.right++;state.streak++;state.missStreak=0}else{state.streak=0;state.missStreak=(state.missStreak||0)+1}let key=`${sub}-${level}`,st=state.history[key]||{ok:0,total:0};st.total++;if(ok)st.ok++;state.history[key]=st;save()}
+function selectAnswer(i){if(state.answered)return;let q=state.q,ok=q.options[i]===q.correct;state.answered=true;state.selected=i;recordAnswer(q,state.sub,state.level,ok);render()}
+function startGuide(){if(state.exam||state.answered)return;state.guided=true;state.guideStep=0;state.guideChoice=null;state.keyboard=true;render()}
+function exitGuide(){state.guided=false;state.guideStep=0;state.guideChoice=null;state.keyboard=false;render()}
+function guideChoose(i){state.guideChoice=i;render()}
+function guideNext(){state.guideStep=Math.min(2,state.guideStep+1);render()}
+const guideStrategies={
+ algebra:['Identifica les operacions i l’ordre en què cal aplicar-les.','Substituir o desenvolupar; reduir termes semblants i factoritzar si cal.','Calcular directament sense respectar parèntesis.','Eliminar els exponents dels monomis.'],
+ language:['Defineix les variables i identifica les paraules clau.','Convertir cada relació numèrica en una expressió o equació.','Suposar que tots els nombres són iguals.','Canviar sumes per productes sistemàticament.'],
+ linear:['Desenvolupa i ordena abans d’aïllar x.','Eliminar denominadors si n’hi ha; distribuir i agrupar termes.','Elevar els dos membres al quadrat.','Dividir sempre per x.'],
+ quadratic:['Ordena el polinomi i busca les arrels.','Arribar a ax²+bx+c=0; factoritzar o usar la fórmula.','Igualar a zero cada terme d’una suma.','Fer Ruffini sense revisar el grau.'],
+ higher:['Factoritza completament el polinomi.','Treure factor comú; Ruffini o canvi t=x², segons el cas.','Eliminar els termes de grau alt.','Dividir per x sense verificar si x=0 és arrel.'],
+ special:['Revisa el domini i tria la transformació adequada.','Domini i restriccions; bases comunes, propietats o potències, segons el cas.','Ignorar les possibles solucions extranyes.','Cancel·lar qualsevol suma al numerador i denominador.'],
+ systems:['Combina les equacions sense perdre solucions.','Substitució o reducció, amb comprovació de cada parella.','Resoldre només la primera equació.','Sumar sempre totes les incògnites.'],
+ inequal:['Troba els valors crítics i estudia els signes.','Resoldre cada condició i fer la intersecció; invertir el signe si cal.','Canviar sempre el signe de la desigualtat.','No comprovar els extrems dels intervals.']
+};
+function guideHtml(){let g=guideStrategies[state.u],step=state.guideStep;return `<div class="guidebox"><div class="guidehead"><div><strong>🧭 Vull anar pas a pas</strong><small>Pas ${step+1} de 3 · l’exercici no canvia</small></div><button class="secondary" onclick="exitGuide()">✕ Sortir del mode</button></div>${step===0?`<p><b>1. Escull una estratègia.</b> ${esc(g[0])}</p><div class="guideopts">${[g[1],g[2],g[3]].map((t,i)=>`<button class="guideopt ${state.guideChoice===i?'picked':''}" onclick="guideChoose(${i})">${esc(t)}</button>`).join('')}</div>${state.guideChoice!==null?`<div class="${state.guideChoice===0?'hint':'feedback bad'}">${state.guideChoice===0?'✓ Bona estratègia. Pots passar al següent pas.':'Revisa la idea: intenta una transformació que conservi l’equivalència.'}</div>`:''}<button class="primary" ${state.guideChoice!==0?'disabled':''} onclick="guideNext()">Continua →</button>`:step===1?`<p><b>2. Desenvolupa al teu ritme.</b> ${esc(state.q.hint)}</p><p class="note">Escriu aquí el pas que vulguis, no cal copiar l’equació sencera. Aquest esborrany és lliure i no es corregeix automàticament.</p>${keyboardHtml()}<div class="actions"><button class="secondary" onclick="state.guideStep=0;render()">← Estratègia</button><button class="primary" onclick="guideNext()">Ja ho tinc · Veure opcions →</button></div>`:`<p><b>3. Comprova la teva resposta.</b> Selecciona una de les quatre solucions de sota. Quan responguis, veuràs l’explicació completa.</p><button class="secondary" onclick="state.guideStep=1;render()">← Torna a l’esborrany</button>`}</div>`}
+function beginExam(){if(state.exam)return;const pools=units.flatMap(u=>u.sub.map(s=>({sub:s[0],unit:u.id,level:state.level})));let selected=S(pools).slice(0,10).map(x=>({...x,q:safeQuestion(x.sub,x.level),choice:-1}));state.exam={items:selected,index:0,done:false};state.guided=false;state.keyboard=false;render()}
+function answerExam(i){let e=state.exam;if(!e||e.done)return;let item=e.items[e.index];if(item.choice>=0)return;item.choice=i;recordAnswer(item.q,item.sub,item.level,item.q.options[i]===item.q.correct);if(e.index===e.items.length-1)e.done=true;else e.index++;render()}
+function exitExam(){if(!state.exam)return;if(!state.exam.done&&!confirm('Vols sortir del simulacre? Les respostes fetes ja estan comptades a les estadístiques.'))return;state.exam=null;next()}
+function save(){try{localStorage.setItem('batx_math_practica_stats',JSON.stringify({attempts:state.attempts,right:state.right,streak:state.streak,missStreak:state.missStreak,history:state.history}))}catch(e){}}
+function restore(){try{const data=JSON.parse(localStorage.getItem('batx_math_practica_stats')||'{}');for(const k of ['attempts','right','streak','missStreak','history'])if(data[k]!==undefined)state[k]=data[k]}catch(e){}}
+function topicStats(){return units.map(u=>{let keys=u.sub.map(s=>s[0]);let vals=Object.entries(state.history).filter(([k])=>keys.some(sub=>k.startsWith(sub+'-')));return {id:u.id,name:u.name,total:vals.reduce((n,[,v])=>n+v.total,0),ok:vals.reduce((n,[,v])=>n+v.ok,0)}})}
+function examHtml(){let e=state.exam,score=e.items.filter(it=>it.choice>=0&&it.q.options[it.choice]===it.q.correct).length;
+if(e.done)return `<div class="examhead"><h2>Simulacre finalitzat</h2><button class="secondary" onclick="exitExam()">✕ Tornar a practicar</button></div><div class="examscore">${score} / ${e.items.length} encerts</div><p>Correcció del simulacre (sense pistes durant la prova):</p>${e.items.map((it,i)=>`<details class="review"><summary>${i+1}. ${esc(units.find(u=>u.id===it.unit).sub.find(s=>s[0]===it.sub)[1])} · ${it.q.options[it.choice]===it.q.correct?'✓ Correcte':'✕ Incorrecte'}</summary><div class="smallmath" data-tex="${esc(it.q.expr)}"></div><p>Resposta: <span data-tex="${esc(it.q.correct)}"></span></p><p>${esc(it.q.explanation)}</p></details>`).join('')}<button class="primary" onclick="exitExam()">Finalitza i torna a practicar</button>`;
+let it=e.items[e.index];return `<div class="examhead"><div><div class="eyebrow">SIMULACRE · SENSE PISTES</div><h2>Pregunta ${e.index+1} de ${e.items.length}</h2></div><button class="secondary" onclick="exitExam()">✕ Sortir</button></div><div class="examtrack"><div style="width:${e.index/e.items.length*100}%"></div></div><p class="prompt">${esc(it.q.prompt)}</p><div class="mathline" data-tex="${esc(it.q.expr)}"></div><div class="label">Selecciona la resposta (no podràs tornar enrere)</div><div class="choices">${it.q.options.map((opt,i)=>`<button class="choice" onclick="answerExam(${i})"><span data-tex="${esc(opt)}"></span></button>`).join('')}</div><p class="note">Apartats barrejats · nivell ${['','Fàcil','Mitjà','Difícil'][it.level]} · correcció al final</p>`}
+function render(){let unit=units.find(u=>u.id===state.u),q=state.q;if(!q){state.q=safeQuestion(state.sub,state.level);q=state.q}let studied=Object.values(state.history).reduce((a,v)=>a+v.total,0),pc=state.attempts?Math.round(100*state.right/state.attempts):0;const suggest=state.streak>=5&&state.level<3?'up':(state.missStreak>=3&&state.level>1?'down':null);
+$('#app').innerHTML=`<div class="layout"><aside class="side"><div class="brand"><div class="logo">ƒ</div><div><b>1a Avaluació<br>CCSS</b><small>1r de Batxillerat</small></div></div><div class="navhead">Blocs de pràctica</div><div class="navlist">${units.map(u=>`<div class="navgroup"><button class="navbtn ${u.id===state.u?'active':''}" aria-expanded="${u.id===state.u}" onclick="setUnit('${u.id}')"><span style="font-size:18px;min-width:26px;text-align:center">${u.icon}</span><span style="flex:1">${u.name}</span><span class="num">${u.sub.length}</span><span class="chevron">${u.id===state.u?'▾':'▸'}</span></button>${u.id===state.u?`<div class="navsublist">${u.sub.map(sub=>`<button class="navsub ${sub[0]===state.sub?'active':''}" ${sub[0]===state.sub?'aria-current="page"':''} onclick="setSub('${sub[0]}')">${sub[1]}</button>`).join('')}</div>`:''}</div>`).join('')}</div><div class="footer">Versió de pràctica · sense iniciar sessió<br>Estadístiques desades en aquest navegador.</div></aside><main class="main"><div class="top"><div><div class="eyebrow">PRÀCTICA GUIADA · MATEMÀTIQUES</div><h1 class="title">${state.exam?'Simulacre d’examen':unit.name}</h1><p class="desc">${state.exam?'10 preguntes barrejades · correcció final': 'Selecciona un tipus d’exercici al menú lateral i practica al teu ritme.'}</p></div><div class="pill">${state.right} encerts · ${state.attempts} intents</div></div><div class="two"><div><section class="panel">${state.exam?examHtml():`<div class="tools"><div class="seg" role="group" aria-label="Dificultat">${['Fàcil','Mitjà','Difícil'].map((v,i)=>`<button class="${i+1===state.level?'on':''}" onclick="setLevel(${i+1})">${v}</button>`).join('')}</div><div class="actions"><button class="secondary" onclick="beginExam()">📝 Simulacre (10)</button><button class="primary" onclick="next()">↻ Nou exercici</button></div></div>${suggest?`<div class="adaptive">${suggest==='up'?'Has encertat 5 exercicis seguits. Vols provar un nivell més difícil?':'Si aquest nivell et costa, pots practicar-ne un de més accessible.'} <button class="secondary" onclick="setLevel(${state.level+(suggest==='up'?1:-1)})">Provar ${suggest==='up'?'nivell superior':'nivell inferior'}</button></div>`:''}<div class="challenge"><div class="label">EXERCICI ${state.attempts+1} · ${unit.sub.find(s=>s[0]===state.sub)[1]}</div><div class="prompt">${esc(q.prompt)}</div><div class="mathline" data-tex="${esc(q.expr)}"></div></div>${state.guided&&!state.answered?guideHtml():''}${(!state.guided||state.guideStep===2||state.answered)?`<div class="label">Selecciona la resposta correcta</div><div class="choices">${q.options.map((opt,i)=>`<button class="choice ${state.answered?(opt===q.correct?'ok':i===state.selected?'bad':''):''}" onclick="selectAnswer(${i})" ${state.answered?'disabled':''}><span data-tex="${esc(opt)}"></span></button>`).join('')}</div>`:''}${state.answered?`<div class="feedback ${q.options[state.selected]===q.correct?'':'bad'}">${q.options[state.selected]===q.correct?'✓ Molt bé! Has encertat.':'✕ La resposta correcta està marcada en verd.'}</div><div class="problemstage"><b>Resolució explicada</b><ol class="solutionsteps"><li><b>Identifica l'estratègia.</b> ${esc(q.hint)}</li><li><b>Transforma i calcula.</b> ${q.workingEquation?`<div class="smallmath" data-tex="${esc(q.workingEquation)}"></div>`:''}${esc(q.explanation)}</li><li><b>Resposta correcta.</b> <span data-tex="${esc(q.correct)}"></span></li></ol></div><div class="actions"><button class="primary" onclick="next()">Següent exercici →</button></div>`:state.guided?'':`<div class="actions"><button class="secondary" onclick="toggleHint()">💡 Pista</button><button class="primary" onclick="startGuide()">🧭 Vull anar pas a pas</button><button class="secondary" onclick="toggleKeyboard()">⌨ Espai de treball</button><button class="secondary" onclick="reveal()">Veure la resolució</button></div><div id="hintarea"></div>`}${!state.guided?`<div id="workarea">${state.keyboard?keyboardHtml():''}</div>`:''}`}</section></div><div class="asidepanel"><section class="panel"><div class="minihead">El teu progrés</div><div class="statrow"><div class="stat"><strong>${pc}%</strong><small>Percentatge d’encerts</small></div><div class="stat"><strong>${state.streak}</strong><small>Ratxa actual</small></div></div><div class="progress"><div style="width:${pc}%"></div></div><p class="note">${studied} activitats resoltes en aquest navegador. El percentatge indica encerts ÷ intents, no temari completat.</p><div class="minihead">Resultats per bloc</div>${topicStats().map(t=>`<div class="topicstat"><div><span>${esc(t.name)}</span><b>${t.total?Math.round(t.ok/t.total*100)+'%':'—'}</b></div><div class="progress"><div style="width:${t.total?100*t.ok/t.total:0}%"></div></div><small>${t.ok}/${t.total} encerts</small></div>`).join('')}<button class="secondary" onclick="resetStats()" style="font-size:12px">Reinicia les estadístiques</button></section><section class="panel"><div class="minihead">📖 Teoria i exemples</div><p class="desc">Recorda les propietats bàsiques abans de practicar.</p><div class="outline">${theory[state.u].slice(0,3).map(t=>`<p>• ${t[0]}</p>`).join('')}</div><button class="secondary" onclick="showTheory()">Obre la teoria →</button><div class="minihead" style="margin-top:24px">Com funciona el simulacre?</div><p class="note">10 exercicis barrejats, sense pistes ni resolució fins al final. Els resultats també compten a les estadístiques.</p><button class="secondary" onclick="beginExam()" ${state.exam?'disabled':''}>Comença el simulacre</button></section></div></div><div class="footer">Nivell Mitjà per defecte. El mode pas a pas orienta el procediment; l’esborrany no té correcció simbòlica automàtica.</div></main></div>${state.theory?theoryModal():''}`;renderMath()}
+function toggleHint(){let a=$('#hintarea');a.innerHTML=a.innerHTML?'':`<div class="hint">💡 ${esc(state.q.hint)}</div>`}function reveal(){state.answered=true;state.selected=-1;recordAnswer(state.q,state.sub,state.level,false);render()}function resetStats(){if(confirm('Vols eliminar les estadístiques desades en aquest navegador?')){state.attempts=0;state.right=0;state.streak=0;state.missStreak=0;state.history={};save();render()}}function showTheory(){state.theory=true;render()}function closeTheory(){state.theory=false;render()}function theoryModal(){return `<div class="modalback" onclick="if(event.target===this)closeTheory()"><div class="modal" role="dialog" aria-modal="true"><div class="modaltop"><div><div class="eyebrow">APUNTS RÀPIDS</div><h2>${units.find(x=>x.id===state.u).name}</h2></div><button class="close" aria-label="Tanca" onclick="closeTheory()">×</button></div>${theory[state.u].map(t=>`<div class="theoryitem"><b>${t[0]}</b><p>${t[1]}</p><div class="smallmath" data-tex="${esc(t[2])}"></div></div>`).join('')}<div class="actions"><button class="primary" onclick="closeTheory()">Torna a practicar</button></div></div></div>`}
+function toggleKeyboard(){state.keyboard=!state.keyboard;render()}function keyboardHtml(){let keys=['7','8','9','+','−','×','÷','4','5','6','(',')','x','y','1','2','3','²','³','√','^','0','.',',','=','/','⌫','Neteja'];return `<div class="problemstage"><b>La meva llibreta matemàtica</b><p class="note">Espai d’esborrany; no cal reescriure l’enunciat ni la fórmula. Pots escriure amb el teclat físic o prémer els botons.</p><input class="kbdinput" id="scratch" aria-label="Esborrany matemàtic" value="${esc(state.kinput)}" oninput="state.kinput=this.value" placeholder="Escriu només els passos que necessitis"><div class="kbd">${keys.map(key=>`<button class="key" onclick="keyPress('${key}')">${key}</button>`).join('')}</div><div class="note">La llibreta és lliure: la correcció automàtica d’aquesta versió es fa mitjançant les opcions de resposta.</div></div>`}function keyPress(k){let inp=$('#scratch');if(!inp)return;if(k==='Neteja'){inp.value=''}else if(k==='⌫'){inp.value=inp.value.slice(0,-1)}else{inp.value+=k};state.kinput=inp.value;inp.focus()}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(state.theory)closeTheory();else if(state.guided)exitGuide()}});restore();next();
+</script></body></html>
